@@ -1,0 +1,53 @@
+{
+  "BRAND": {
+    "PREFIX": "",
+    "NAME": "Portföy",
+    "SUFFIX": "Web Sitem'e"
+  },
+  "NAV": {
+    "HOME": "Ana Sayfa",
+    "ABOUT": "Hakkımda",
+    "PROJECTS": "Projeler",
+    "CONTACT": "İletişim"
+  },
+  "TITLE": {
+    "BRAND": "Portföy Web Sitem'e",
+    "GREETING": "Hoşgeldiniz",
+    "HERO": "Merhaba, ben <highlight>Onur</highlight>",
+    "HERO_TECH_STACK": [
+      "Frontend Mühendisi",
+      "React & Next.js Geliştiricisi",
+      "Backend Deneyimli Frontend",
+      "Ölçeklenebilir Web Uygulamaları İnşa Etme"
+    ]
+  },
+  "SUB_TITLE": {
+    "HERO": "Kullanıcı deneyimine, ölçeklenebilirliğe ve temiz mimariye güçlü bir şekilde odaklanarak modern, yüksek performanslı web arayüzleri tasarlıyorum."
+  },
+  "BUTTON": {
+    "GET_IN_TOUCH": "İletişime Geç",
+    "VIEW_PROJECTS": "Projeleri Görüntüle",
+    "DOWNLOAD_CV": "CV İndir",
+    "SEND_FEEDBACK": "Görüş Gönder",
+    "SENDING": "Gönderiliyor..."
+  },
+  "LIST_ITEM": {
+    "RIGHTS": "Tüm hakları saklıdır.",
+    "DESIGNED": "Onur Yemez tarafından ❤️ ile tasarlandı",
+    "CONTACT": "İletişim",
+    "FOLLOW_ME": "Takipte Kalın"
+  },
+
+  "ERROR": {
+    "FEEDBACK_SEND_FAILED": "Görüş gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+    "TOO_MANY_REQUESTS": "Çok fazla istek yapıldı. Lütfen yavaşlayın ve daha sonra tekrar deneyin.",
+    "UNKNOWN": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin.",
+    "INTERNAL_ERROR": "Teknik bir sorun yaşıyoruz. Lütfen kısa süre sonra tekrar deneyin."
+  },
+  "SUCCESS": {
+    "FEEDBACK_SENT": "Teşekkür ederiz! Görüşleriniz bizim için çok değerli."
+  },
+  "LOADING": {
+    "DEFAULT": "Yükleniyor..."
+  }
+}

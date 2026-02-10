@@ -1,0 +1,53 @@
+{
+  "BRAND": {
+    "PREFIX": "My",
+    "NAME": "Portfolio",
+    "SUFFIX": "Website"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "TITLE": {
+    "BRAND": "My Portfolio Website",
+    "GREETING": "Welcome",
+    "HERO": "Hi, I’m <highlight>Onur</highlight>",
+    "HERO_TECH_STACK": [
+      "Frontend Engineer",
+      "React & Next.js Developer",
+      "Frontend with Backend Experience",
+      "Building Scalable Web Apps"
+    ]
+  },
+  "SUB_TITLE": {
+    "HERO": "I craft modern, high-performance web interfaces with a strong focus on user experience, scalability, and clean architecture."
+  },
+  "BUTTON": {
+    "GET_IN_TOUCH": "Get in Touch",
+    "VIEW_PROJECTS": "View Projects",
+    "DOWNLOAD_CV": "Download CV",
+    "SEND_FEEDBACK": "Send Feedback",
+    "SENDING": "Sending..."
+  },
+  "LIST_ITEM": {
+    "RIGHTS": "All rights reserved.",
+    "DESIGNED": "Designed with ❤️ by Onur Yemez",
+    "CONTACT": "Contact",
+    "FOLLOW_ME": "Follow Me"
+  },
+
+  "ERROR": {
+    "FEEDBACK_SEND_FAILED": "Failed to send feedback. Please try again later.",
+    "TOO_MANY_REQUESTS": "Too many requests. Please slow down and try again later.",
+    "UNKNOWN": "Something went wrong. Please try again later.",
+    "INTERNAL_ERROR": "We’re having a technical issue. Please try again shortly."
+  },
+  "SUCCESS": {
+    "FEEDBACK_SENT": "Thank you! Your feedback means a lot to us"
+  },
+  "LOADING": {
+    "DEFAULT": "Loading..."
+  }
+}
