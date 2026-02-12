@@ -15,23 +15,25 @@ export const Footer = () => {
             </>
           </ul>
 
-          <ul className="font-body flex flex-col items-center justify-center gap-3 pt-4 sm:items-start">
-            <ListItem i18nKey={ListItemKey.CONTACT} variant="title" />
+          <ul className="font-body flex flex-col items-center justify-center gap-3 pt-1 sm:items-start sm:pt-5">
+            <ListItem i18nKey={ListItemKey.CONTACT} variant="title" className="sm:mb-2" />
             <ListItem i18nKey={ListItemKey.EMAIL} variant="small" />
             <ListItem i18nKey={ListItemKey.PHONE} variant="small" />
           </ul>
-          <ul className="font-body flex flex-col items-center gap-3 pt-4">
-            <ListItem i18nKey={ListItemKey.FOLLOW_ME} variant="title" />
+          <ul className="font-body flex flex-col items-center gap-3 pt-1 sm:pt-5">
+            <ListItem i18nKey={ListItemKey.FOLLOW_ME} variant="title" className="sm:mb-2" />
             <div className="flex items-center gap-4">
               <ListItem
                 i18nKey={ListItemKey.MAIL_TO}
                 variant="link"
                 href="mailto:onuryemez.is@gmail.com"
+                className="transition-all duration-400 hover:translate-y-1"
               />
               <ListItem
                 i18nKey={ListItemKey.LINKED_IN}
                 variant="link"
                 href="https://www.linkedin.com/in/onur-yemez"
+                className="transition-all duration-400 hover:translate-y-1"
               />
             </div>
           </ul>

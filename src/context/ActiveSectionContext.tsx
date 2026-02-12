@@ -1,6 +1,7 @@
 'use client';
 import { createContext, ReactNode, useContext, useEffect, useRef, useState } from 'react';
 import { SectionKey } from '@/types/section';
+import { usePathname } from 'next/navigation';
 
 type ActiveSectionContextType = {
   active: SectionKey;
@@ -13,6 +14,7 @@ export const ActiveSectionContext = createContext<ActiveSectionContextType | nul
 const HEADER_OFFSET = 96;
 
 export const ActiveSectionProvider = ({ children }: { children: ReactNode }) => {
+  const pathname = usePathname();
   const [active, setActive] = useState<SectionKey>(SectionKey.HOME);
 
   const sectionRefs = useRef<Record<SectionKey, HTMLElement | null>>({
@@ -52,7 +54,7 @@ export const ActiveSectionProvider = ({ children }: { children: ReactNode }) => 
     Object.values(sectionRefs.current).forEach((el) => el && observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <ActiveSectionContext.Provider value={{ active, registerSection, scrollTo }}>

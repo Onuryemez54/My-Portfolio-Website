@@ -1,18 +1,17 @@
 'use client';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Loader, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { ButtonKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
 
 type Variant = 'primary' | 'secondary' | 'tertiary' | 'submit';
 type Size = 'sm' | 'md' | 'lg';
-type As = 'button' | 'link' | 'li';
+type As = 'button' | 'li' | 'link';
 
 type BaseProps = {
   as?: As;
-  href?: string | { pathname: string; hash?: string };
+  href?: string;
   size?: Size;
   download?: boolean;
   variant: Variant;
@@ -28,7 +27,7 @@ type BaseProps = {
 type ButtonProps = BaseProps & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const baseClass =
-  'inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 disabled:cursor-not-allowed disabled:opacity-60';
+  'inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold transition-all duration-300  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 disabled:cursor-not-allowed disabled:opacity-60';
 
 const sizeStyles: Record<Size, string> = {
   sm: `
@@ -51,10 +50,11 @@ const sizeStyles: Record<Size, string> = {
 };
 
 const variantStyles: Record<Variant, string> = {
-  primary: 'bg-accent-400 text-primary-800 hover:bg-accent-300',
+  primary:
+    'bg-primary-700 text-primary-300 hover:bg-primary-300 hover:text-primary-700 hover:translate-y-2 border border-primary-600',
 
   secondary:
-    'border border-primary-600 text-primary-200 hover:border-accent-400 hover:text-accent-400',
+    'border border-btn-secondary-border text-btn-secondary-foreground hover:border-btn-secondary-hover-border hover:text-btn-secondary-hover-foreground',
 
   tertiary: 'border border-accent-400 text-accent-400 hover:bg-accent-400 hover:text-accent-700',
 
@@ -109,14 +109,6 @@ export const Button = ({
         </a>
       );
     }
-
-    return (
-      <Link href={href} data-testid={testId} className={classes} aria-disabled={disabled}>
-        {icon}
-        {isBusy && <Loader2 className="h-5 w-5 animate-spin" />}
-        <span>{label}</span>
-      </Link>
-    );
   }
 
   if (as === 'li') {

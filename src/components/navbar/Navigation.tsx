@@ -2,13 +2,13 @@
 import { ThemeToggleButton } from './ThemeToggleButton';
 import { DesktopNavigation } from './DesktopNavigation';
 import { LocaleSwitcher } from './LocaleSwitcher';
-import { MobileNavigation } from './MobileNavigation ';
+import { MobileNavigation } from './MobileNavigation';
 
 export const Navigation = () => {
   return (
-    <nav className="flex items-center gap-1 sm:gap-2 lg:gap-8">
+    <nav className="flex items-center gap-0.5 sm:gap-1 md:gap-8 lg:gap-10 2xl:gap-14">
       <DesktopNavigation />
-      <div className="flex items-center sm:gap-1 lg:gap-2">
+      <div className="animate-in zoom-in flex items-center gap-1 duration-300">
         <LocaleSwitcher />
         <ThemeToggleButton />
       </div>

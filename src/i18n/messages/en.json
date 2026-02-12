@@ -27,7 +27,7 @@
   "BUTTON": {
     "GET_IN_TOUCH": "Get in Touch",
     "VIEW_PROJECTS": "View Projects",
-    "DOWNLOAD_CV": "Download CV",
+    "VIEW_CV": "View CV",
     "SEND_FEEDBACK": "Send Feedback",
     "SENDING": "Sending..."
   },

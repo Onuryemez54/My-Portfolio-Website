@@ -27,7 +27,7 @@
   "BUTTON": {
     "GET_IN_TOUCH": "İletişime Geç",
     "VIEW_PROJECTS": "Projeleri Görüntüle",
-    "DOWNLOAD_CV": "CV İndir",
+    "VIEW_CV": "CV Görüntüle",
     "SEND_FEEDBACK": "Görüş Gönder",
     "SENDING": "Gönderiliyor..."
   },

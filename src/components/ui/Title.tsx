@@ -21,7 +21,7 @@ const variantStyles: Record<Variant, string> = {
   tertiary: 'sm:text-xl md:text-2xl text-accent-400',
 };
 
-const baseClass = 'text-primary-50 leading-tight';
+const baseClass = 'text-primary-50 leading-tight font-body';
 
 export const Title = ({ variant, className, i18nKey }: TitleProps) => {
   const t = useTranslations(TitleKey.TITLE);
@@ -30,9 +30,7 @@ export const Title = ({ variant, className, i18nKey }: TitleProps) => {
     return (
       <h1 className={cn(baseClass, variantStyles[variant], className)}>
         {t.rich(i18nKey, {
-          highlight: (chunk) => (
-            <span className="text-accent-400">{chunk}</span>
-          ),
+          highlight: (chunk) => <span className="text-accent-400">{chunk}</span>,
         })}
       </h1>
     );
@@ -64,9 +62,5 @@ export const Title = ({ variant, className, i18nKey }: TitleProps) => {
     );
   }
 
-  return (
-    <h2 className={cn(baseClass, variantStyles[variant], className)}>
-      {t(i18nKey)}
-    </h2>
-  );
+  return <h2 className={cn(baseClass, variantStyles[variant], className)}>{t(i18nKey)}</h2>;
 };

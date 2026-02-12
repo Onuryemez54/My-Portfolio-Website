@@ -35,32 +35,15 @@
   --color-border: var(--color-primary-500);
   --color-accent-border: var(--color-accent-border);
 
-  --color-btn-primary-bg: var(--color-btn-primary-bg);
-  --color-btn-primary-hover-bg: var(--color-btn-primary-hover-bg);
-  --color-btn-primary-foreground: var(--color-btn-primary-foreground);
-  --color-btn-primary-hover-foreground: var(--color-btn-primary-hover-foreground);
-
-  --color-toggle-bg: var(--color-toggle-bg);
-  --color-toggle-icon: var(--color-toggle-icon);
-  --color-toggle-bg-hover: var(--color-toggle-bg-hover);
+  --color-btn-secondary-border: var(--color-btn-secondary-border);
+  --color-btn-secondary-foreground: var(--color-btn-secondary-foreground);
+  --color-btn-secondary-hover-border: var(--color-btn-secondary-hover-border);
+  --color-btn-secondary-hover-foreground: var(--color-btn-secondary-hover-foreground);
 
   --color-nav-foreground: var(--color-nav-foreground);
   --color-nav-active-foreground: var(--color-nav-active-foreground);
 
-  --color-sidebar-foreground: var(--color-sidebar-foreground);
-  --color-sidebar-hover-foreground: var(--color-sidebar-hover-foreground);
-  --color-sidebar-hover-bg: var(--color-sidebar-hover-bg);
-  --color-sidebar-active-foreground: var(--color-sidebar-active-foreground);
-  --color-sidebar-active-bg: var(--color-sidebar-active-bg);
-
   --color-footer-foreground: var(--color-footer-foreground);
-
-  --color-animate-wave-start: var(--color-animate-wave-start);
-  --color-animate-wave-mid: var(--color-animate-wave-mid);
-  --color-animate-wave-mid2: var(--color-animate-wave-mid2);
-  --color-animate-wave-end: var(--color-animate-wave-end);
-
-  --color-explore-btn: var(--color-explore-btn);
 
   --color-mobile-nav-bg: var(--color-mobile-nav-bg);
 
@@ -77,17 +60,9 @@
   --color-toast-success-border: var(--color-toast-success-border);
   --color-toast-success-foreground: var(--color-toast-success-foreground);
 
-  --color-toast-info-bg: var(--color-toast-info-bg);
-  --color-toast-info-border: var(--color-toast-info-border);
-  --color-toast-info-foreground: var(--color-toast-info-foreground);
-
-  --color-toast-warning-bg: var(--color-toast-warning-bg);
-  --color-toast-warning-border: var(--color-toast-warning-border);
-  --color-toast-warning-foreground: var(--color-toast-warning-foreground);
-
-  --color-rdp-accent-color: var(--color-rdp-accent-color);
-  --color-rdp-background-color: var(--color-rdp-background-color);
-  --color-rdp-accent-background-color: var(--color-rdp-accent-background-color);
+  --color-cursor-bg: var(--color-cursor-bg);
+  --color-cursor-hover-text: var(--color-cursor-hover-text);
+  --color-cursor-text: var(--color-cursor-text);
 }
 
 :root {
@@ -117,34 +92,33 @@
     --color-accent-900: #1a260b;
     --color-accent-950: #0d1306;
 
-    --color-background: var(--color-primary-950);
-    --color-border: rgba(140, 207, 47, 0.25);
     --color-accent-border: var(--color-accent-500);
 
-    --color-btn-primary-bg: var(--color-accent-400);
-    --color-btn-primary-hover-bg: var(--color-accent-300);
-    --color-btn-primary-foreground: #0b0f0e;
-    --color-btn-primary-hover-foreground: #050807;
+    --color-btn-secondary-border: var(--color-primary-600);
+    --color-btn-secondary-foreground: var(--color-primary-300);
+    --color-btn-secondary-hover-border: var(--color-accent-400);
+    --color-btn-secondary-hover-foreground: var(--color-accent-400);
 
     --color-nav-foreground: #c7d2cf;
     --color-nav-active-foreground: var(--color-accent-300);
 
-    --color-toggle-bg: #162320;
-    --color-toggle-icon: var(--color-accent-400);
-    --color-toggle-bg-hover: #223532;
-
-    --color-sidebar-foreground: #a5b8b2;
-    --color-sidebar-hover-foreground: #e1e7e5;
-    --color-sidebar-hover-bg: #223532;
-    --color-sidebar-active-foreground: var(--color-accent-400);
-    --color-sidebar-active-bg: #2f4741;
-
     --color-footer-foreground: var(--color-primary-600);
 
-    --color-utility-text: #e1e7e5;
+    --color-utility-text: var(--color-primary-50);
     --color-utility-bg: var(--color-accent-400);
-    --color-utility-hover-bg: var(--color-accent-300);
-    --color-utility-hover-text: #050807;
+    --color-utility-hover-bg: var(--color-accent-500);
+    --color-utility-hover-text: var(--color-white);
+
+    --color-cursor-bg: var(--color-primary-200);
+    --color-cursor-hover-text: var(--color-primary-50);
+    --color-cursor-text: var(--color-blue-800);
+
+    --color-toast-error-bg: #5c1212;
+    --color-toast-error-border: #a50e0e;
+    --color-toast-error-foreground: #ffcccc;
+    --color-toast-success-bg: #134e4a;
+    --color-toast-success-border: #0e7c78;
+    --color-toast-success-foreground: #ccf9f7;
   }
 
   &.light {
@@ -160,22 +134,45 @@
     --color-primary-100: #111827;
     --color-primary-50: #0b1220;
 
+    --color-accent-950: #f4fbea;
+    --color-accent-900: #e6f4c7;
+    --color-accent-800: #cde88f;
+    --color-accent-700: #a9d84f;
+    --color-accent-600: #8ccf2f;
+    --color-accent-500: #6fa61f;
+    --color-accent-400: #557f18;
+    --color-accent-300: #3f5e14;
+    --color-accent-200: #2b3f10;
+    --color-accent-100: #1a260b;
+    --color-accent-50: #0d1306;
+
+    --color-accent-border: var(--color-primary-400);
+
+    --color-btn-secondary-border: var(--color-primary-600);
+    --color-btn-secondary-foreground: var(--color-primary-400);
+    --color-btn-secondary-hover-border: var(--color-sky-800);
+    --color-btn-secondary-hover-foreground: var(--color-sky-800);
+
     --color-nav-foreground: #374151;
     --color-nav-active-foreground: #5e9708;
 
-    --color-toggle-bg: #e5e7eb;
-    --color-toggle-icon: #6fa61f;
-
-    --color-toggle-bg-hover: #d1d5db;
-    --color-toggle-icon-hover: #5e9708;
-
-    --color-sidebar-foreground: #374151;
-    --color-sidebar-hover-foreground: #111827;
-    --color-sidebar-hover-bg: #e5e7eb;
-    --color-sidebar-active-foreground: #5e9708;
-    --color-sidebar-active-bg: #d1d5db;
-
     --color-footer-foreground: #374151;
+
+    --color-utility-text: var(--color-primary-900);
+    --color-utility-bg: var(--color-primary-200);
+    --color-utility-hover-bg: var(--color-primary-300);
+    --color-utility-hover-text: var(--color-primary-950);
+
+    --color-cursor-bg: var(--color-primary-200);
+    --color-cursor-hover-text: var(--color-blue-800);
+    --color-cursor-text: var(--color-blue-500);
+
+    --color-toast-error-bg: #fddede;
+    --color-toast-error-border: #f19999;
+    --color-toast-error-foreground: #9a0c0c;
+    --color-toast-success-bg: #d1fae5;
+    --color-toast-success-border: #6ee7b7;
+    --color-toast-success-foreground: #0a785b;
   }
 }
 
@@ -290,6 +287,28 @@
     }
   }
 
+  /* logo */
+  @keyframes logoBounce {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    20% {
+      transform: translateX(-6px) scale(1.1);
+    }
+    40% {
+      transform: translateX(6px) scale(1.1);
+    }
+    60% {
+      transform: translateX(-4px) scale(1.05);
+    }
+    80% {
+      transform: translateX(4px) scale(1.05);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
+
   /* animations */
 
   /* theme */
@@ -350,6 +369,17 @@
       animation: none;
     }
   }
+
+  /* logo */
+  .logo-bounce {
+    animation: logoBounce 1s ease-in-out;
+  }
+
+  /* cursor */
+  .cursor-hover {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+  }
 }
 
 /* scrollbars */
@@ -368,4 +398,17 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-500);
+}
+
+* {
+  cursor: none !important;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+input,
+textarea {
+  cursor: text !important;
 }

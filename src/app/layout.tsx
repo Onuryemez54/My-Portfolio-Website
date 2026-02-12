@@ -3,6 +3,7 @@ import { useLocale } from 'next-intl';
 import { ReactNode } from 'react';
 import Providers from '@/components/providers/Providers';
 import { ScrollToTopButton } from '@/components/common/animations/ScrollToTopButton';
+import { CursorProvider } from '@/components/providers/CursorProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body className="bg-background overflow-x-hidden">
+        <CursorProvider />
         <Providers>{children}</Providers>
         <ScrollToTopButton />
       </body>

@@ -15,7 +15,7 @@ export const ScrollToTopButton = () => {
         setVisible(true);
       }
 
-      if (currentY < lastScrollY.current) {
+      if (currentY < lastScrollY.current && currentY < 300) {
         setVisible(false);
       }
 
@@ -39,7 +39,7 @@ export const ScrollToTopButton = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="bg-utility-bg text-utility-text fixed right-6 bottom-6 z-50 flex h-8 w-8 items-center justify-center rounded-full shadow-lg backface-hidden lg:h-12 lg:w-12"
+          className="bg-utility-bg text-utility-text hover:bg-utility-hover-bg hover:text-utility-hover-text transiti fixed right-6 bottom-8 z-50 flex h-8 w-8 items-center justify-center rounded-full shadow-lg duration-300 backface-hidden lg:h-10 lg:w-10"
         >
           <ArrowUp className="h-4 w-4 lg:h-5 lg:w-5" />
         </motion.button>

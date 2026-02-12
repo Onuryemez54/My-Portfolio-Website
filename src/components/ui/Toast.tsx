@@ -1,6 +1,6 @@
 'use client';
 import { JSX, useEffect, useState } from 'react';
-import { X, CheckCircle2, AlertCircle, InfoIcon, LucideMessageCircleWarning } from 'lucide-react';
+import { X, CheckCircle2, AlertCircle } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { ToastItemType, ToastType } from '@/types/toast/toastTypes';
 
@@ -77,7 +77,6 @@ export const Toast = ({ type, message, duration, progress, onClose }: ToastItemT
         </button>
       </div>
 
-      {/* progress bar */}
       {progress && isSuccess && (
         <div className="h-1 w-full overflow-hidden rounded-b-2xl bg-emerald-500/20">
           <div

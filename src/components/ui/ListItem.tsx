@@ -83,7 +83,7 @@ export const ListItem = ({ variant = 'large', wrap = false, i18nKey, className, 
 
   if (href) {
     return (
-      <Link href={href} target="_blank" className={variantStyles[variant]}>
+      <Link href={href} target="_blank" className={cn(variantStyles[variant], className)}>
         {icon}
       </Link>
     );

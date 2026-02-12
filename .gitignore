@@ -34,8 +34,9 @@
 /**/user.json
 
 # Videos & screenshots
-/**/*.png
 /**/*.webm
+/**/*.png
+!public/**/*.png
 
 # =========================
 # ENV / SECRETS
