@@ -83,7 +83,11 @@ export const ListItem = ({ variant = 'large', wrap = false, i18nKey, className, 
 
   if (href) {
     return (
-      <Link href={href} target="_blank" className={cn(variantStyles[variant], className)}>
+      <Link
+        href={href}
+        target="_blank"
+        className={cn(variantStyles[variant], className, 'inline-flex p-2 2xl:p-3')}
+      >
         {icon}
       </Link>
     );

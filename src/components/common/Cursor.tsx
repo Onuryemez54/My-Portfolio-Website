@@ -27,13 +27,9 @@ export const Cursor = () => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
 
-      const target = e.target as HTMLElement;
+      const element = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement;
 
-      const isHovering =
-        target.closest('a') ||
-        target.closest('button') ||
-        target.closest('[role="button"]') ||
-        target.classList.contains('cursor-pointer');
+      const isHovering = element?.closest('a, button, [role="button"], .cursor-pointer');
 
       if (iconRef.current) {
         iconRef.current.style.color = isHovering
@@ -45,8 +41,8 @@ export const Cursor = () => {
     window.addEventListener('mousemove', move);
 
     const animate = () => {
-      position.current.x += (mouse.current.x - position.current.x) * 0.2;
-      position.current.y += (mouse.current.y - position.current.y) * 0.2;
+      position.current.x += (mouse.current.x - position.current.x) * 0.35;
+      position.current.y += (mouse.current.y - position.current.y) * 0.35;
 
       if (cursorRef.current) {
         cursorRef.current.style.transform = `

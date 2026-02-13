@@ -46,6 +46,11 @@ export const ActiveSectionProvider = ({ children }: { children: ReactNode }) => 
 
         if (!visible.length) return;
 
+        const scrollPosition = window.scrollY;
+        if (scrollPosition === 0) {
+          setActive(SectionKey.HOME);
+        }
+
         setActive(visible[0].target.id as SectionKey);
       },
       { rootMargin: '-45% 0px -45% 0px', threshold: 0 }

@@ -40,7 +40,7 @@ export const NavLinks = ({ setIsOpen }: NavLinksProps) => {
             className={cn(
               'group relative transition-all duration-300',
               'text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-[22px]',
-              'font-semibold',
+              'p-0 font-semibold md:p-0.5',
               isActive ? 'text-nav-active-foreground' : 'text-nav-foreground'
             )}
           >
