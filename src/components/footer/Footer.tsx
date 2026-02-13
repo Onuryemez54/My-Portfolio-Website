@@ -15,12 +15,12 @@ export const Footer = () => {
             </>
           </ul>
 
-          <ul className="font-body flex flex-col items-center justify-center gap-3 pt-1 sm:items-start sm:pt-5">
+          <ul className="font-body flex flex-col items-center justify-center gap-4 pt-1 sm:items-start sm:pt-5">
             <ListItem i18nKey={ListItemKey.CONTACT} variant="title" className="sm:mb-2" />
             <ListItem i18nKey={ListItemKey.EMAIL} variant="small" />
             <ListItem i18nKey={ListItemKey.PHONE} variant="small" />
           </ul>
-          <ul className="font-body flex flex-col items-center gap-3 pt-1 sm:pt-5">
+          <ul className="font-body flex flex-col items-center gap-4 pt-1 sm:pt-5">
             <ListItem i18nKey={ListItemKey.FOLLOW_ME} variant="title" className="sm:mb-2" />
             <div className="flex items-center gap-4">
               <ListItem

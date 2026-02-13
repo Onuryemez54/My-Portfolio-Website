@@ -60,7 +60,6 @@
   --color-toast-success-border: var(--color-toast-success-border);
   --color-toast-success-foreground: var(--color-toast-success-foreground);
 
-  --color-cursor-bg: var(--color-cursor-bg);
   --color-cursor-hover-text: var(--color-cursor-hover-text);
   --color-cursor-text: var(--color-cursor-text);
 }
@@ -109,9 +108,8 @@
     --color-utility-hover-bg: var(--color-accent-500);
     --color-utility-hover-text: var(--color-white);
 
-    --color-cursor-bg: var(--color-primary-200);
     --color-cursor-hover-text: var(--color-primary-50);
-    --color-cursor-text: var(--color-blue-800);
+    --color-cursor-text: var(--color-accent-400);
 
     --color-toast-error-bg: #5c1212;
     --color-toast-error-border: #a50e0e;
@@ -163,7 +161,6 @@
     --color-utility-hover-bg: var(--color-primary-300);
     --color-utility-hover-text: var(--color-primary-950);
 
-    --color-cursor-bg: var(--color-primary-200);
     --color-cursor-hover-text: var(--color-blue-800);
     --color-cursor-text: var(--color-blue-500);
 
@@ -373,12 +370,6 @@
   /* logo */
   .logo-bounce {
     animation: logoBounce 1s ease-in-out;
-  }
-
-  /* cursor */
-  .cursor-hover {
-    background-color: transparent;
-    backdrop-filter: blur(10px);
   }
 }
 

@@ -6,7 +6,6 @@ export const Cursor = () => {
   const [isTouch, setIsTouch] = useState<boolean | null>(null);
 
   const cursorRef = useRef<HTMLDivElement>(null);
-  const iconDivRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<SVGSVGElement>(null);
 
   const mouse = useRef({ x: 0, y: 0 });
@@ -41,9 +40,6 @@ export const Cursor = () => {
           ? 'var(--color-cursor-hover-text)'
           : 'var(--color-cursor-text)';
       }
-      if (iconDivRef.current) {
-        iconDivRef.current.classList.toggle('cursor-hover', !!isHovering);
-      }
     };
 
     window.addEventListener('mousemove', move);
@@ -76,13 +72,10 @@ export const Cursor = () => {
 
   return (
     <div ref={cursorRef} className="pointer-events-none fixed top-0 left-0 z-9999">
-      <div
-        ref={iconDivRef}
-        className="bg-cursor-bg flex h-6 w-6 items-center justify-center rounded-full transition-all duration-400 lg:h-7 lg:w-7"
-      >
+      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent backdrop-blur-2xl transition-all duration-400 lg:h-7 lg:w-7">
         <MousePointer2
           ref={iconRef}
-          className="text-cursor-text h-3 w-3 transition-colors duration-400 lg:h-4 lg:w-4"
+          className="text-cursor-text h-4 w-4 transition-colors duration-400 lg:h-5 lg:w-5 xl:h-6 xl:w-6"
         />
       </div>
     </div>
