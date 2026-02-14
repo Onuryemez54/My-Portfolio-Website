@@ -15,14 +15,14 @@ export const FadeUp = ({
   return (
     <motion.div
       initial={{ opacity: 0, y: initialY }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{
-        duration: 0.6,
+        duration: 0.8,
         delay,
         ease: 'easeOut',
       }}
-      className={`flex justify-center w-full ${className}`}
+      className={`flex w-full justify-center ${className}`}
     >
       {children}
     </motion.div>

@@ -1,6 +1,6 @@
 'use client';
 import { createContext, ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { SectionKey } from '@/types/section';
+import { SectionKey } from '@/types/sectionTypes';
 import { usePathname } from 'next/navigation';
 
 type ActiveSectionContextType = {

@@ -20,12 +20,20 @@ export enum TitleKey {
   HERO = 'HERO',
   HERO_TECH_STACK = 'HERO_TECH_STACK',
 
+  ABOUT_ME = 'ABOUT_ME',
+  PROJECTS = 'PROJECTS',
+  CONTACT = 'CONTACT',
+
   FEEDBACK = 'FEEDBACK',
 }
 
 export enum SubTitleKey {
   TITLE = 'SUB_TITLE',
   HERO = 'HERO',
+
+  ABOUT_ME = 'ABOUT_ME',
+  PROJECTS = 'PROJECTS',
+  CONTACT = 'CONTACT',
 
   FEEDBACK = 'FEEDBACK',
 }
@@ -37,6 +45,17 @@ export enum ButtonKey {
   VIEW_CV = 'VIEW_CV',
   SEND_FEEDBACK = 'SEND_FEEDBACK',
   SENDING = 'SENDING',
+}
+
+export enum TabsKey {
+  TITLE = 'TABS',
+  FRONTEND = 'FRONTEND',
+  BACKEND = 'BACKEND',
+  TOOLS = 'TOOLS',
+  TESTING = 'TESTING',
+  EDUCATION = 'EDUCATION',
+  CERTIFICATIONS = 'CERTIFICATIONS',
+  EXPERIENCE = 'EXPERIENCE',
 }
 
 export enum ListItemKey {

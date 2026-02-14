@@ -17,13 +17,32 @@
     "HERO_TECH_STACK": [
       "Frontend Engineer",
       "React & Next.js Developer",
-      "Frontend with Backend Experience",
+      "Backend Experience",
       "Building Scalable Web Apps"
-    ]
+    ],
+    "ABOUT_ME": "About Me",
+    "PROJECTS": "My featured projects",
+    "CONTACT": "Let's Connect"
   },
   "SUB_TITLE": {
-    "HERO": "I craft modern, high-performance web interfaces with a strong focus on user experience, scalability, and clean architecture."
+    "HERO": "I craft modern, high-performance web interfaces with a strong focus on user experience, scalability, and clean architecture.",
+    "ABOUT_ME": [
+      "I am a front-end focused full-stack developer with a strong engineering background, building modern and scalable web applications. I specialize in React, TypeScript, and Next.js, creating clean, maintainable, and production-ready interfaces with reusable component architecture.",
+      "On the backend, I integrate authentication flows, database logic, and REST APIs using services like Supabase and Firebase, along with custom Next.js route handlers to deliver complete full-stack solutions.",
+      "I am committed to continuous learning and performance-driven development. I actively collaborate within teams using Git-based workflows, contributing through structured commits, pull requests, and code reviews to ensure clean and reliable production outcomes."
+    ]
   },
+
+  "TABS": {
+    "FRONTEND": "Frontend",
+    "BACKEND": "Backend",
+    "TOOLS": "Tools",
+    "TESTING": "Testing",
+    "EDUCATION": "Education",
+    "CERTIFICATIONS": "Certifications",
+    "EXPERIENCE": "Experience"
+  },
+
   "BUTTON": {
     "GET_IN_TOUCH": "Get in Touch",
     "VIEW_PROJECTS": "View Projects",

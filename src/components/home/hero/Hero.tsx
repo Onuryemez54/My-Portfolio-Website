@@ -1,12 +1,12 @@
 'use client';
-import { Container } from '../ui/Container';
-import { FadeUp } from '../common/animations/FadeUp';
-import { SubTitle } from '../ui/SubTitle';
+import { Container } from '@/components/ui/Container';
+import { FadeUp } from '@/components/common/animations/FadeUp';
+import { SubTitle } from '@/components/ui/SubTitle';
 import { ButtonKey, SubTitleKey, TitleKey } from '@/types/i18n/keys';
-import { Title } from '../ui/Title';
+import { Title } from '@/components/ui/Title';
 import { AvatarCodeRing } from './AvatarCodeRing';
-import { Button } from '../ui/Button';
-import { SectionKey } from '@/types/section';
+import { Button } from '@/components/ui/Button';
+import { SectionKey } from '@/types/sectionTypes';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 
 export const Hero = () => {

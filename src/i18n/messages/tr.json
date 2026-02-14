@@ -17,13 +17,32 @@
     "HERO_TECH_STACK": [
       "Frontend Mühendisi",
       "React & Next.js Geliştiricisi",
-      "Backend Deneyimli Frontend",
+      "Backend Deneyimli",
       "Ölçeklenebilir Web Uygulamaları İnşa Etme"
-    ]
+    ],
+    "ABOUT_ME": "Hakkımda",
+    "PROJECTS": "Öne çıkan projelerim",
+    "CONTACT": "Bağlatı kuralım"
   },
   "SUB_TITLE": {
-    "HERO": "Kullanıcı deneyimine, ölçeklenebilirliğe ve temiz mimariye güçlü bir şekilde odaklanarak modern, yüksek performanslı web arayüzleri tasarlıyorum."
+    "HERO": "Kullanıcı deneyimine, ölçeklenebilirliğe ve temiz mimariye güçlü bir şekilde odaklanarak modern, yüksek performanslı web arayüzleri tasarlıyorum.",
+    "ABOUT_ME": [
+      "Güçlü bir mühendislik geçmişine sahip, modern ve ölçeklenebilir web uygulamaları geliştiren ön uç odaklı tam yığın geliştiricisiyim. React, TypeScript ve Next.js konusunda uzmanım, temiz, bakımı kolay ve üretime hazır arayüzler oluşturuyorum ve yeniden kullanılabilir bileşen mimarisi oluşturuyorum.",
+      "Backend tarafında, Supabase ve Firebase gibi hizmetler kullanarak kimlik doğrulama akışlarını, veritabanı mantığını ve REST API'lerini entegre ediyorum ve eksiksiz tam yığın çözümler sunmak için özel Next.js rota işleyicileri kullanıyorum.",
+      "Sürekli öğrenmeye ve performans odaklı geliştirmeye kendimi adadım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz ve güvenilir üretim sonuçları sağlıyorum."
+    ]
   },
+
+  "TABS": {
+    "FRONTEND": "Frontend",
+    "BACKEND": "Backend",
+    "TOOLS": "Araçlar",
+    "TESTING": "Test",
+    "EDUCATION": "Eğitim",
+    "CERTIFICATIONS": "Sertifikalar",
+    "EXPERIENCE": "Deneyim"
+  },
+
   "BUTTON": {
     "GET_IN_TOUCH": "İletişime Geç",
     "VIEW_PROJECTS": "Projeleri Görüntüle",

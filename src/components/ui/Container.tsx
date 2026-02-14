@@ -1,6 +1,6 @@
 'use client';
 import { ReactNode } from 'react';
-import { SectionKey } from '@/types/section';
+import { SectionKey } from '@/types/sectionTypes';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { ScrollReveal } from '../common/animations/ScrollReveal';
 import { cn } from '@/utils/cn';
@@ -17,9 +17,10 @@ export const Container = ({ children, className, id }: ContainerProps) => {
   const { registerSection } = useActiveSectionContext();
 
   const isHeroSection = id === SectionKey.HOME;
-  const sectionStyles = isHeroSection ? 'py-24 sm:py-30 ' : 'py-8 sm:py-12 md:py-14 lg:py-16';
+  const isAboutSection = id === SectionKey.ABOUT;
+  const sectionStyles = isHeroSection ? 'py-24 sm:py-32 ' : 'py-8 sm:py-12 md:py-14 lg:py-16';
 
-  if (isHeroSection) {
+  if (isHeroSection || isAboutSection) {
     return (
       <section
         id={id}

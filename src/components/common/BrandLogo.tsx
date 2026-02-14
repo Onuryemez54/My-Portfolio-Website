@@ -1,6 +1,6 @@
 'use client';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import { SectionKey } from '@/types/section';
+import { SectionKey } from '@/types/sectionTypes';
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/utils/cn';
 import Image from 'next/image';

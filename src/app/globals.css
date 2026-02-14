@@ -98,7 +98,7 @@
     --color-btn-secondary-hover-border: var(--color-accent-400);
     --color-btn-secondary-hover-foreground: var(--color-accent-400);
 
-    --color-nav-foreground: #c7d2cf;
+    --color-nav-foreground: var(--color-primary-300);
     --color-nav-active-foreground: var(--color-accent-300);
 
     --color-footer-foreground: var(--color-primary-600);
@@ -151,10 +151,10 @@
     --color-btn-secondary-hover-border: var(--color-sky-800);
     --color-btn-secondary-hover-foreground: var(--color-sky-800);
 
-    --color-nav-foreground: #374151;
-    --color-nav-active-foreground: #5e9708;
+    --color-nav-foreground: var(--color-primary-300);
+    --color-nav-active-foreground: var(--color-accent-400);
 
-    --color-footer-foreground: #374151;
+    --color-footer-foreground: var(--color-primary-300);
 
     --color-utility-text: var(--color-primary-900);
     --color-utility-bg: var(--color-primary-200);

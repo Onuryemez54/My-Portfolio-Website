@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FadeScale } from '../common/animations/FadeScale';
+import { FadeScale } from '@/components/common/animations/FadeScale';
 
 export const AvatarCodeRing = () => {
   return (

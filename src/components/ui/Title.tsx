@@ -16,12 +16,13 @@ interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    'text-center text-xl  font-extrabold sm:text-2xl md:text-left md:text-3xl lg:text-4xl 2xl:text-5xl',
-  secondary: ' sm:text-2xl lg:text-3xl 2xl:text-4xl text-accent-400',
+    'text-primary-200 font-body text-center text-xl  font-extrabold sm:text-2xl md:text-left md:text-3xl lg:text-4xl 2xl:text-5xl',
+  secondary:
+    'text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl text-accent-400 font-heading font-semibold mb-4 sm:mb-6  lg:mb-7 xl:mb-8',
   tertiary: 'sm:text-xl md:text-2xl text-accent-400',
 };
 
-const baseClass = 'text-primary-50 leading-tight font-body';
+const baseClass = 'leading-tight';
 
 export const Title = ({ variant, className, i18nKey }: TitleProps) => {
   const t = useTranslations(TitleKey.TITLE);
@@ -40,7 +41,7 @@ export const Title = ({ variant, className, i18nKey }: TitleProps) => {
     const techStacks = t.raw(i18nKey) as string[];
     return (
       <h1 className={cn(baseClass, variantStyles[variant], className)}>
-        <span className="text-primary-200 min-h-1lh block leading-tight">
+        <span className="text-primary-200 block leading-tight">
           <span className="inline-block w-full text-center md:text-left lg:w-[28ch]">
             <TypeAnimation
               sequence={[

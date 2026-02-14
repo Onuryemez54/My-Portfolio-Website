@@ -1,5 +1,5 @@
-import { Container } from '../ui/Container';
-import { SectionKey } from '@/types/section';
+import { Container } from '../../ui/Container';
+import { SectionKey } from '@/types/sectionTypes';
 
 export const Projects = () => {
   return (

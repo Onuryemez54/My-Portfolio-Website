@@ -2,7 +2,7 @@
 import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { NavKey } from '@/types/i18n/keys';
-import { SectionKey } from '@/types/section';
+import { SectionKey } from '@/types/sectionTypes';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { itemVariants } from '@/constants/listVariants';
 import { motion } from 'framer-motion';

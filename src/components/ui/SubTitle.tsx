@@ -18,7 +18,7 @@ interface SubTitleProps extends HTMLAttributes<HTMLParagraphElement> {
 
 const variantStyles: Record<Variant, string> = {
   primary: 'text-primary-300 mt-4 mb-8 max-w-xl text-center text-base sm:text-lg md:text-left',
-  secondary: 'text-sm sm:text-lg text-primary-200',
+  secondary: 'text-primary-200 mb-8 max-w-xl text-base sm:text-lg text-left',
   tertiary: 'text-center text-primary-200/80 mb-4 text-sm sm:text-base lg:text-lg',
 };
 
@@ -26,6 +26,19 @@ const baseClass = 'font-light font-body leading-relaxed';
 
 export const SubTitle = ({ variant, className, i18nKey, values }: SubTitleProps) => {
   const t = useTranslations(SubTitleKey.TITLE);
+
+  if (i18nKey === SubTitleKey.ABOUT_ME) {
+    const aboutMe = t.raw(i18nKey) as string[];
+    return (
+      <p className={cn(baseClass, variantStyles[variant], className)}>
+        {aboutMe.map((paragraph, index) => (
+          <span key={index} className="mb-4 block last:mb-0 md:mb-6 2xl:mb-8">
+            {paragraph}
+          </span>
+        ))}
+      </p>
+    );
+  }
 
   return <p className={cn(baseClass, variantStyles[variant], className)}>{t(i18nKey)}</p>;
 };
