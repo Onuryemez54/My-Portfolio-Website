@@ -43,6 +43,36 @@
     "EXPERIENCE": "Experience"
   },
 
+  "TAB_CONTENT": {
+    "REACT": "React",
+    "NEXT_JS": "Next.js",
+    "TYPESCRIPT": "TypeScript",
+    "TAILWIND_CSS": "Tailwind CSS",
+    "REDUX": "Redux",
+    "TANSTACK_QUERY": "TanStack Query",
+    "SUPABASE": "Supabase",
+    "FIREBASE": "Firebase",
+    "SERVER_ACTIONS": "Next.js Server Actions",
+    "PRISMA": "Prisma",
+    "REST_API": "REST API",
+    "GIT": "Git",
+    "GITHUB": "GitHub",
+    "VS_CODE": "VS Code",
+    "FIGMA": "Figma",
+    "WEB_PERFORMANCE": "Web Performance",
+    "SEO": "SEO",
+    "VITEST": "Vitest",
+    "REACT_TESTING_LIBRARY": "React Testing Library",
+    "PLAYWRIGHT": "Playwright",
+    "BACHELOR": "Bachelor's Degree in Mechanical Engineering, Bartın University (2012-2017) ",
+    "CODE2CAREER": "Web Development Program — Code2Career AB (01/2023 - 04/2024)",
+    "FREECODECAMP": "Responsive Web Design Certification — freeCodeCamp",
+    "REACT_TESTING": "React Testing Library Certification — Udemy(Stephen Grider)",
+    "JAVASCRIPT": "JavaScript Certification — Udemy(Anthony Alicea)",
+    "PICK_YOUR_POUR": "Web Developer Intern at Pick Your Pour — (10/25 - Present)",
+    "INDEPENDENT_PROJECTS": "Independent Projects — Full Stack Developer — (11/24 - Present)"
+  },
+
   "BUTTON": {
     "GET_IN_TOUCH": "Get in Touch",
     "VIEW_PROJECTS": "View Projects",

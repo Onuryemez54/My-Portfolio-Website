@@ -5,8 +5,8 @@ import { NavKey } from '@/types/i18n/keys';
 import { SectionKey } from '@/types/sectionTypes';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { itemVariants } from '@/constants/listVariants';
+import { AnimatedNavButton } from '../ui/AnimatedNavButton';
 import { motion } from 'framer-motion';
-import { cn } from '@/utils/cn';
 
 interface NavLinksProps {
   setIsOpen?: (v: boolean) => void;
@@ -31,41 +31,16 @@ export const NavLinks = ({ setIsOpen }: NavLinksProps) => {
       {navLinks.map((link) => {
         const isActive = active === link.key;
 
-        const node = (
-          <button
-            onClick={() => {
-              scrollTo(link.key);
-              setIsOpen?.(false);
-            }}
-            className={cn(
-              'group relative transition-all duration-300',
-              'text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-[22px]',
-              'p-0 font-semibold md:p-0.5',
-              isActive ? 'text-nav-active-foreground' : 'text-nav-foreground'
-            )}
-          >
-            <span
-              className={cn(
-                'inline-block transition-transform duration-300',
-                !isActive && 'group-hover:-translate-y-1'
-              )}
-            >
-              {link.label}
-            </span>
-
-            <span
-              className={cn(
-                'bg-nav-active-foreground absolute -bottom-1 left-0 h-0.5 w-0 transition-[width] duration-300',
-                isActive && 'w-full',
-                !isActive && 'group-hover:w-full'
-              )}
-            />
-          </button>
-        );
-
         return (
           <motion.li key={link.key} variants={itemVariants}>
-            {node}
+            <AnimatedNavButton
+              label={link.label}
+              isActive={isActive}
+              onClick={() => {
+                scrollTo(link.key);
+                setIsOpen?.(false);
+              }}
+            />
           </motion.li>
         );
       })}

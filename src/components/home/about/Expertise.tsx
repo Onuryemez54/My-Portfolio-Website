@@ -7,9 +7,9 @@ import {
 } from '@/constants/expertise';
 import { ExpertiseCategory, TechStackCategory } from '@/types/expertiseTypes';
 import { Divider } from '@/components/common/Divider';
+import { renderContent } from './RenderContent';
 import { TabList } from './TabList';
 import { useState } from 'react';
-import { renderContent } from './RenderContent';
 
 export const Expertise = () => {
   const [activeTechStackTab, setActiveTechStackTab] = useState<TechStackCategory>(
@@ -20,7 +20,7 @@ export const Expertise = () => {
   );
 
   return (
-    <div className="grid items-center justify-start gap-10 md:grid-cols-12 md:gap-0">
+    <div className="grid items-start justify-start gap-10 md:grid-cols-12 md:gap-0">
       <div className="col-span-5 w-full gap-4">
         <TabList<TechStackCategory>
           tabs={techStackTabs}
@@ -36,7 +36,7 @@ export const Expertise = () => {
           activeTab={activeExpertiseTab}
           onChange={setActiveExpertiseTab}
         />
-        {renderContent(activeExpertiseTab, expertiseContent)}
+        {renderContent(activeExpertiseTab, expertiseContent, true)}
       </div>
     </div>
   );

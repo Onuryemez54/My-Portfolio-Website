@@ -43,6 +43,36 @@
     "EXPERIENCE": "Deneyim"
   },
 
+  "TAB_CONTENT": {
+    "REACT": "React",
+    "NEXT_JS": "Next.js",
+    "TYPESCRIPT": "TypeScript",
+    "TAILWIND_CSS": "Tailwind CSS",
+    "REDUX": "Redux",
+    "TANSTACK_QUERY": "TanStack Query",
+    "SUPABASE": "Supabase",
+    "FIREBASE": "Firebase",
+    "SERVER_ACTIONS": "Next.js Server Actions",
+    "PRISMA": "Prisma",
+    "REST_API": "REST API",
+    "GIT": "Git",
+    "GITHUB": "GitHub",
+    "VS_CODE": "VS Code",
+    "FIGMA": "Figma",
+    "WEB_PERFORMANCE": "Web Performance",
+    "SEO": "SEO",
+    "VITEST": "Vitest",
+    "REACT_TESTING_LIBRARY": "React Testing Library",
+    "PLAYWRIGHT": "Playwright",
+    "BACHELOR": "Makine Mühendisliği, Bartın Üniversitesi (2012-2017)",
+    "CODE2CAREER": "Web Development Program — Code2Career AB (01/2023 - 04/2024)",
+    "FREECODECAMP": "Duyarlı Web Tasarımı Sertifikası — freeCodeCamp",
+    "REACT_TESTING": "React Testing Library Sertifikası — Udemy(Stephen Grider)",
+    "JAVASCRIPT": "JavaScript Sertifikası — Udemy(Anthony Alicea)",
+    "PICK_YOUR_POUR": "Pick Your Pour'da Web Geliştirici Stajyeri — (10/25 - Halen)",
+    "INDEPENDENT_PROJECTS": "Bağımsız Projeler — Full Stack Geliştirici — (11/24 - Halen)"
+  },
+
   "BUTTON": {
     "GET_IN_TOUCH": "İletişime Geç",
     "VIEW_PROJECTS": "Projeleri Görüntüle",
