@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { Loader2 } from 'lucide-react';
+import { Eye, Loader2 } from 'lucide-react';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { ButtonKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
@@ -27,7 +27,7 @@ type BaseProps = {
 type ButtonProps = BaseProps & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const baseClass =
-  'inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold transition-all duration-300  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 disabled:cursor-not-allowed disabled:opacity-60';
+  'inline-flex items-center group justify-center gap-2 rounded-full font-body font-semibold transition-all duration-300  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 disabled:cursor-not-allowed disabled:opacity-60';
 
 const sizeStyles: Record<Size, string> = {
   sm: `
@@ -106,6 +106,9 @@ export const Button = ({
           className={classes}
         >
           <span>{label}</span>
+          <span className="ml-1 transition duration-500 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <Eye size={16} />
+          </span>
         </a>
       );
     }

@@ -10,3 +10,10 @@ export enum ExpertiseCategory {
   CERTIFICATIONS = 'CERTIFICATIONS',
   EXPERIENCE = 'EXPERIENCE',
 }
+
+export enum DownloadableCertification {
+  CODE2CAREER = 'CODE2CAREER',
+  FREECODECAMP = 'FREECODECAMP',
+  REACT_TESTING = 'REACT_TESTING',
+  JAVASCRIPT = 'JAVASCRIPT',
+}

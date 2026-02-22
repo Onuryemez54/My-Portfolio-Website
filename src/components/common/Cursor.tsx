@@ -41,8 +41,8 @@ export const Cursor = () => {
     window.addEventListener('mousemove', move);
 
     const animate = () => {
-      position.current.x += (mouse.current.x - position.current.x) * 0.35;
-      position.current.y += (mouse.current.y - position.current.y) * 0.35;
+      position.current.x += (mouse.current.x - position.current.x) * 0.5;
+      position.current.y += (mouse.current.y - position.current.y) * 0.5;
 
       if (cursorRef.current) {
         cursorRef.current.style.transform = `
