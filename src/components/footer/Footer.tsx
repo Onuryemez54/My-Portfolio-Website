@@ -22,11 +22,17 @@ export const Footer = () => {
           </ul>
           <ul className="font-body flex flex-col items-center gap-4 pt-1 sm:pt-5">
             <ListItem i18nKey={ListItemKey.FOLLOW_ME} variant="title" className="sm:mb-2" />
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <ListItem
                 i18nKey={ListItemKey.MAIL_TO}
                 variant="link"
                 href="mailto:onuryemez.is@gmail.com"
+                className="transition-all duration-400 hover:translate-y-1"
+              />
+              <ListItem
+                i18nKey={ListItemKey.GITHUB}
+                variant="link"
+                href="https://github.com/Onuryemez54"
                 className="transition-all duration-400 hover:translate-y-1"
               />
               <ListItem

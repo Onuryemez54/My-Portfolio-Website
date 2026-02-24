@@ -105,6 +105,7 @@ export enum ListItemKey {
   PHONE = 'PHONE',
   MAIL_TO = 'MAIL_TO',
   LINKED_IN = 'LINKED_IN',
+  GITHUB = 'GITHUB',
 }
 
 export enum ErrorKey {

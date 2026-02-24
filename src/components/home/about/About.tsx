@@ -12,7 +12,7 @@ import Image from 'next/image';
 export const About = () => {
   return (
     <Container id={SectionKey.ABOUT}>
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-14">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
         <div className="grid items-center gap-16 md:grid-cols-7">
           <FadeLeftToRight delay={0.2} className="md:col-span-4">
             <Title variant="secondary" i18nKey={TitleKey.ABOUT_ME} />

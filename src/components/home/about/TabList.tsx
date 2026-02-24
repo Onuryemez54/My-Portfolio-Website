@@ -4,6 +4,7 @@ import { tabItemVariants, listVariants } from '@/constants/listVariants';
 import { useTranslations } from 'next-intl';
 import { TabsKey } from '@/types/i18n/keys';
 import { AnimatedNavButton } from '@/components/ui/AnimatedNavButton';
+import { Fragment } from 'react';
 
 interface TabListProps<T> {
   tabs: { key: T; label: TabsKey }[];
@@ -27,16 +28,17 @@ export const TabList = <T extends string>({ tabs, activeTab, onChange }: TabList
         const label = t(tab.label);
 
         return (
-          <motion.li key={String(tab.key)} variants={tabItemVariants} className="flex items-center">
-            <AnimatedNavButton
-              label={label}
-              isActive={isActive}
-              onClick={() => onChange(tab.key)}
-              size="tab"
-            />
-
-            {index < tabs.length - 1 && <span className="bg-primary-500/60 ml-3 h-5 w-px" />}
-          </motion.li>
+          <Fragment key={String(tab.key)}>
+            <motion.li variants={tabItemVariants}>
+              <AnimatedNavButton
+                label={label}
+                isActive={isActive}
+                onClick={() => onChange(tab.key)}
+                size="tab"
+              />
+            </motion.li>
+            {index < tabs.length - 1 && <span className="bg-primary-500/60 h-5 w-px" />}
+          </Fragment>
         );
       })}
     </motion.ul>

@@ -106,7 +106,7 @@ export const Button = ({
           className={classes}
         >
           <span>{label}</span>
-          <span className="ml-1 transition duration-500 group-hover:-translate-y-0.5 group-hover:scale-110">
+          <span className="ml-1 transition duration-500 group-hover:scale-110">
             <Eye size={16} />
           </span>
         </a>

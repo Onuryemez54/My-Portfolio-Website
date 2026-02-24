@@ -22,7 +22,7 @@ const variantStyles: Record<Variant, string> = {
   tertiary: 'sm:text-xl md:text-2xl text-accent-400',
 };
 
-const baseClass = 'leading-tight';
+const baseClass = 'leading-tight tracking-tight capitalize';
 
 export const Title = ({ variant, className, i18nKey }: TitleProps) => {
   const t = useTranslations(TitleKey.TITLE);

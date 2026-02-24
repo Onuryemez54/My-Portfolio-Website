@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/utils/cn';
 import { ReactNode } from 'react';
-import { Phone, Mail, Linkedin } from 'lucide-react';
+import { Phone, Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { ListItemKey } from '@/types/i18n/keys';
@@ -53,6 +53,9 @@ export const ListItem = ({ variant = 'large', wrap = false, i18nKey, className, 
       break;
     case ListItemKey.LINKED_IN:
       icon = <Linkedin size={20} />;
+      break;
+    case ListItemKey.GITHUB:
+      icon = <Github size={20} />;
       break;
     case ListItemKey.DESIGNED:
       keys = [ListItemKey.DESIGNED];

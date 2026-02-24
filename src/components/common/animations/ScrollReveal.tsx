@@ -3,13 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ReactNode, useEffect } from 'react';
 
-export const ScrollReveal = ({
-  children,
-  delay = 0,
-}: {
-  children: ReactNode;
-  delay?: number;
-}) => {
+export const ScrollReveal = ({ children, delay = 0 }: { children: ReactNode; delay?: number }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -30,7 +24,7 @@ export const ScrollReveal = ({
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 1, delay },
+          transition: { duration: 0.8, delay },
         },
       }}
       initial="hidden"

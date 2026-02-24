@@ -44,3 +44,14 @@ export const listItemVariants = {
     },
   },
 };
+export const cardItemVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1] as const,
+    },
+  },
+};

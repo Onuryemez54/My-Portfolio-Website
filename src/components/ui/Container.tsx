@@ -18,9 +18,14 @@ export const Container = ({ children, className, id }: ContainerProps) => {
 
   const isHeroSection = id === SectionKey.HOME;
   const isAboutSection = id === SectionKey.ABOUT;
-  const sectionStyles = isHeroSection ? 'py-24 sm:py-32 ' : 'py-8 sm:py-12 md:py-14 lg:py-16';
+  const isProjectsSection = id === SectionKey.PROJECTS;
+  const sectionStyles = isHeroSection
+    ? 'py-24 sm:py-32 '
+    : isProjectsSection
+      ? 'py-6  xl:py-8'
+      : 'py-8 sm:py-12 md:py-14 lg:py-16';
 
-  if (isHeroSection || isAboutSection) {
+  if (isHeroSection || isAboutSection || isProjectsSection) {
     return (
       <section
         id={id}
