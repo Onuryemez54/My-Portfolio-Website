@@ -45,6 +45,9 @@ export enum ButtonKey {
   VIEW_CV = 'VIEW_CV',
   SEND_FEEDBACK = 'SEND_FEEDBACK',
   SENDING = 'SENDING',
+  VIEW_DETAILS = 'VIEW_DETAILS',
+  VIEW_REPO = 'VIEW_REPO',
+  VIEW_LIVE = 'VIEW_LIVE',
 }
 
 export enum TabsKey {
@@ -106,6 +109,18 @@ export enum ListItemKey {
   MAIL_TO = 'MAIL_TO',
   LINKED_IN = 'LINKED_IN',
   GITHUB = 'GITHUB',
+}
+
+export enum ProjectFilterKey {
+  ALL = 'All',
+  NEXT_JS = 'Next.js',
+  REACT = 'React',
+  TYPESCRIPT = 'TypeScript',
+  JAVASCRIPT = 'JavaScript',
+}
+
+export enum ProjectKey {
+  TITLE = 'PROJECTS',
 }
 
 export enum ErrorKey {

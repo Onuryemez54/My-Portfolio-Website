@@ -5,9 +5,9 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { ButtonKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
 
-type Variant = 'primary' | 'secondary' | 'tertiary' | 'submit';
-type Size = 'sm' | 'md' | 'lg';
-type As = 'button' | 'li' | 'link';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'submit' | 'icon';
+type Size = 'sm' | 'md' | 'lg' | 'none';
+type As = 'button' | 'link';
 
 type BaseProps = {
   as?: As;
@@ -47,6 +47,7 @@ const sizeStyles: Record<Size, string> = {
     sm:px-6 sm:py-3 sm:text-sm
     md:px-8 md:py-4 md:text-base
   `,
+  none: '',
 };
 
 const variantStyles: Record<Variant, string> = {
@@ -60,6 +61,8 @@ const variantStyles: Record<Variant, string> = {
 
   submit:
     'w-full rounded-lg border border-primary-500 text-primary-100 hover:bg-primary-500 hover:text-white md:text-lg',
+
+  icon: 'bg-utility-bg text-utility-text p-3 opacity-80 hover:opacity-100 hover:-translate-y-1 hover:scale-110 hover:rotate-30',
 };
 
 export const Button = ({
@@ -104,6 +107,7 @@ export const Button = ({
           rel="noopener noreferrer"
           data-testid={testId}
           className={classes}
+          aria-label={label}
         >
           <span>{label}</span>
           <span className="ml-1 transition duration-500 group-hover:scale-110">
@@ -114,12 +118,35 @@ export const Button = ({
     }
   }
 
-  if (as === 'li') {
+  if (variant === 'icon') {
+    if (i18nKey === ButtonKey.VIEW_DETAILS) {
+      return (
+        <button
+          {...rest}
+          data-testid={testId}
+          type={type}
+          disabled={disabled || isBusy}
+          onClick={handleClick}
+          className={classes}
+          aria-label={label}
+          title={label}
+        >
+          {icon}
+        </button>
+      );
+    }
     return (
-      <li data-testid={testId} className={classes}>
+      <a
+        href={typeof href === 'string' ? href : undefined}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid={testId}
+        className={classes}
+        aria-label={label}
+        title={label}
+      >
         {icon}
-        <span>{label}</span>
-      </li>
+      </a>
     );
   }
 
@@ -131,6 +158,7 @@ export const Button = ({
       disabled={disabled || isBusy}
       onClick={handleClick}
       className={classes}
+      aria-label={label}
     >
       {icon}
       {isBusy && <Loader2 className="h-5 w-5 animate-spin" />}

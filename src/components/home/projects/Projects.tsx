@@ -1,40 +1,48 @@
 'use client';
-import { TitleKey } from '@/types/i18n/keys';
+import { ProjectFilterKey, TitleKey } from '@/types/i18n/keys';
 import { Container } from '../../ui/Container';
 import { SectionKey } from '@/types/sectionTypes';
 import { Title } from '@/components/ui/Title';
 import { useState } from 'react';
 import { Project } from '@/types/projectType';
 import { ProjectModal } from './ProjectModal';
-import { motion } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
 import { projects } from '@/constants/Projects';
 import { FadeUp } from '@/components/common/animations/FadeUp';
-import { cardItemVariants, listVariants } from '@/constants/listVariants';
+import { ScrollReveal } from '@/components/common/animations/ScrollReveal';
+import { ProjectFilterTabs } from './ProjectFilterTabs';
 
 export const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
+  const [activeTech, setActiveTech] = useState<ProjectFilterKey>(ProjectFilterKey.ALL);
+
+  const filteredProjects =
+    activeTech === ProjectFilterKey.ALL
+      ? projects
+      : projects.filter((project) => project.techStack.includes(activeTech));
 
   return (
     <Container id={SectionKey.PROJECTS}>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-3">
         <FadeUp initialY={20}>
-          <Title variant="secondary" i18nKey={TitleKey.PROJECTS} />
+          <Title variant="secondary" i18nKey={TitleKey.PROJECTS} underline />
         </FadeUp>
-        <motion.ul
-          variants={listVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          layout
-          className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => (
-            <motion.li key={project.id} variants={cardItemVariants}>
+
+        <ProjectFilterTabs activeTech={activeTech} setActiveTech={setActiveTech} />
+
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {filteredProjects.map((project, index) => (
+            <ScrollReveal
+              key={index}
+              delay={index * 0.2}
+              initialY={30}
+              initialScale={0.9}
+              duration={0.6}
+            >
               <ProjectCard project={project} onOpen={() => setSelected(project)} />
-            </motion.li>
+            </ScrollReveal>
           ))}
-        </motion.ul>
+        </div>
         <ProjectModal project={selected} onClose={() => setSelected(null)} />
       </div>
     </Container>

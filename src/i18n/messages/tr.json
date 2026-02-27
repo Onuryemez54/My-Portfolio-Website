@@ -73,12 +73,50 @@
     "INDEPENDENT_PROJECTS": "Bağımsız Projeler — Full Stack Geliştirici — (11/24 - Halen)"
   },
 
+  "PROJECT_FILTER": {
+    "All": "Hepsi",
+    "Next_js": "Next.js",
+    "React": "React",
+    "TypeScript": "TypeScript",
+    "JavaScript": "JavaScript"
+  },
+
+  "PROJECTS": {
+    "paradiseHotel": {
+      "title": "Paradise Otel",
+      "description": "Next.js 16, React 19 ve TypeScript ile oluşturulmuş, güvenli kimlik doğrulama, işlem tabanlı rezervasyon mantığı, uluslararasılaştırma, e-posta iş akışları ve tamamen duyarlı modern bir kullanıcı arayüzü sunan üretim düzeyinde bir tam yığın otel rezervasyon platformu.\n\nBu proje, yarış durumu güvenli rezervasyon oluşturma, gelişmiş ara katman tabanlı rota koruması ve kurumsal düzeyde hata yönetimi ile gerçek dünya SaaS mimarisini göstermektedir."
+    },
+    "travelRoute": {
+      "title": "Seyahat Rotası",
+      "description": "Seyahat Rotası seyahat deneyimlerinizi organize etmenize, yapılacaklar listelerini yönetmenize ve dünya genelindeki şehirleri keşfetmenize yardımcı olan tamamen duyarlı bir seyahat planlama uygulamasıdır.\n\nReact, Vite ve TypeScript ile oluşturulmuş tamamen duyarlı bir seyahat planlama uygulaması. Etkileşimli bir haritada şehirler ekleyerek seyahatlerinizi planlayın, yapılacaklar listelerini yönetin, favori yerlerinizi işaretleyin ve seyahat geçmişinizi takip edin."
+    },
+    "movieApp": {
+      "title": "Film Uygulaması",
+      "description": "Film Uygulaması, kullanıcıların incelemek istedikleri filmleri keşfetmelerini sağlayan JavaScript tabanlı bir web uygulamasıdır. Kullanıcılar arama bölümünde arama yapabilir, filmleri favori listelerine ekleyebilir, filmlere yorum ekleyebilir, kategorilere göre listeleyebilir ve filmlerin detaylarını görebilir."
+    },
+    "recipeApp": {
+      "title": "Tarif Uygulaması",
+      "description": "Tarif Uygulaması, kullanıcıların denemek istedikleri tarifleri keşfetmelerini sağlayan JavaScript tabanlı bir web uygulamasıdır. Kullanıcılar arama bölümünde arama yapabilir, tarifleri favori listelerine ekleyebilir, tariflere yorum ekleyebilir, kategorilere göre listeleyebilir ve tariflerin detaylarını görebilir."
+    },
+    "quizApp": {
+      "title": "Quiz Uygulaması",
+      "description": "Quiz Uygulaması, kullanıcıların denemek istedikleri quizleri keşfetmelerini sağlayan JavaScript tabanlı bir web uygulamasıdır. Kullanıcılar arama bölümünde arama yapabilir, quizleri favori listelerine ekleyebilir, quizlere yorum ekleyebilir, kategorilere göre listeleyebilir ve quizlerin detaylarını görebilir."
+    },
+    "portfolio": {
+      "title": "Kişisel Portföy",
+      "description": "Next.js ile oluşturulmuş kişisel bir portföy web sitesi, projelerimi, becerilerimi ve deneyimlerimi sergiliyor. Temiz ve duyarlı bir tasarım, akıcı animasyonlar ve performans için optimize edilmiştir."
+    }
+  },
+
   "BUTTON": {
     "GET_IN_TOUCH": "İletişime Geç",
     "VIEW_PROJECTS": "Projeleri Görüntüle",
     "VIEW_CV": "CV Görüntüle",
     "SEND_FEEDBACK": "Görüş Gönder",
-    "SENDING": "Gönderiliyor..."
+    "SENDING": "Gönderiliyor...",
+    "VIEW_DETAILS": "Detayları Görüntüle",
+    "VIEW_LIVE": "Canlı Görüntüle",
+    "VIEW_REPO": "Depoyu Görüntüle"
   },
   "LIST_ITEM": {
     "RIGHTS": "Tüm hakları saklıdır.",

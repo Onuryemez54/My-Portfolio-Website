@@ -30,6 +30,7 @@ export const Cursor = () => {
       const element = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement;
 
       const isHovering = element?.closest('a, button, [role="button"], .cursor-pointer');
+      // data-nextjs-dialog-content="true"
 
       if (iconRef.current) {
         iconRef.current.style.color = isHovering

@@ -5,13 +5,14 @@ import { useTranslations } from 'next-intl';
 import { HTMLAttributes } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-type Variant = 'primary' | 'secondary' | 'tertiary';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'small';
 type i18nKey = TitleKey;
 
 interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
   variant: Variant;
   className?: string;
   i18nKey: i18nKey;
+  underline?: boolean;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -20,11 +21,12 @@ const variantStyles: Record<Variant, string> = {
   secondary:
     'text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl text-accent-400 font-heading font-semibold mb-4 sm:mb-6  lg:mb-7 xl:mb-8',
   tertiary: 'sm:text-xl md:text-2xl text-accent-400',
+  small: 'text-sm sm:text-base lg:text-lg  text-primary-200 font-semibold ',
 };
 
 const baseClass = 'leading-tight tracking-tight capitalize';
 
-export const Title = ({ variant, className, i18nKey }: TitleProps) => {
+export const Title = ({ variant, className, i18nKey, underline }: TitleProps) => {
   const t = useTranslations(TitleKey.TITLE);
 
   if (i18nKey === TitleKey.HERO) {
@@ -63,5 +65,16 @@ export const Title = ({ variant, className, i18nKey }: TitleProps) => {
     );
   }
 
-  return <h2 className={cn(baseClass, variantStyles[variant], className)}>{t(i18nKey)}</h2>;
+  return (
+    <h2
+      className={cn(
+        baseClass,
+        variantStyles[variant],
+        className,
+        underline && 'decoration-accent-400 underline decoration-4 underline-offset-4'
+      )}
+    >
+      {t(i18nKey)}
+    </h2>
+  );
 };

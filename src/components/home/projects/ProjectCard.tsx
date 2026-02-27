@@ -1,55 +1,63 @@
 'use client';
-import { Github, ExternalLink, Info } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { ButtonKey } from '@/types/i18n/keys';
 import { Project } from '@/types/projectType';
+import { Code2, ExternalLink, Info } from 'lucide-react';
+import { ProjectSubTitle } from './ProjectSubTitle';
 import Image from 'next/image';
 
-interface Props {
+interface ProjectCardProps {
   project: Project;
   onOpen: () => void;
 }
 
-export const ProjectCard = ({ project, onOpen }: Props) => {
+export const ProjectCard = ({ project, onOpen }: ProjectCardProps) => {
   return (
-    <div className="group bg-background/50 border-border ring-accent-400 relative rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:ring-2">
-      <div className="relative p-6">
-        <h3 className="text-lg font-semibold tracking-tight">{project.title}</h3>
+    <div className="group hover:shadow-primary-500 bg-background ring-primary-500 hover:ring-accent-500 relative overflow-hidden rounded-2xl ring-1 transition-all duration-300 hover:shadow-lg hover:ring-2">
+      <div className="relative aspect-4/3 w-full overflow-hidden rounded-t-2xl">
+        <Image
+          src={project.image}
+          alt={project.id}
+          loading="eager"
+          fill
+          sizes="(max-width: 640px) 100vw,
+           (max-width: 1024px) 50vw,
+           33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
 
-        <p className="text-muted-foreground mt-3 line-clamp-3 text-sm">{project.description}</p>
-
-        <div className="group relative h-72 w-full overflow-hidden rounded-2xl">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover"
+        <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <Button
+            i18nKey={ButtonKey.VIEW_DETAILS}
+            variant="icon"
+            onAction={onOpen}
+            icon={<Info className="h-6 w-6" />}
+            size="none"
           />
-        </div>
-
-        <div className="mt-6 flex items-center gap-5">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            className="hover:text-accent-400 transition hover:scale-110"
-          >
-            <Github size={18} />
-          </a>
 
           {project.liveUrl && (
-            <a
+            <Button
+              i18nKey={ButtonKey.VIEW_LIVE}
+              variant="icon"
               href={project.liveUrl}
-              target="_blank"
-              className="transition hover:scale-110 hover:text-green-400"
-            >
-              <ExternalLink size={18} />
-            </a>
+              as="link"
+              icon={<ExternalLink className="h-6 w-6" />}
+              size="none"
+            />
           )}
 
-          <button onClick={onOpen} className="transition hover:scale-110 hover:text-blue-400">
-            <Info size={18} />
-          </button>
+          <Button
+            i18nKey={ButtonKey.VIEW_REPO}
+            variant="icon"
+            href={project.githubUrl}
+            as="link"
+            icon={<Code2 className="h-6 w-6" />}
+            size="none"
+          />
         </div>
       </div>
+
+      <ProjectSubTitle project={project} onOpen={onOpen} />
     </div>
   );
 };

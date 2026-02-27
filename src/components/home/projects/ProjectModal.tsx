@@ -2,15 +2,20 @@
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Project } from '@/types/projectType';
+import { CircleX, Code2, ExternalLink } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { ButtonKey, ProjectKey } from '@/types/i18n/keys';
 import Image from 'next/image';
-import { CircleX } from 'lucide-react';
 
-interface Props {
+interface ProjectModalProps {
   project: Project | null;
   onClose: () => void;
 }
 
-export const ProjectModal = ({ project, onClose }: Props) => {
+export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
+  const t = useTranslations(ProjectKey.TITLE);
+  const tButton = useTranslations(ButtonKey.TITLE);
+
   useEffect(() => {
     if (project) document.body.style.overflow = 'hidden';
     return () => {
@@ -26,6 +31,9 @@ export const ProjectModal = ({ project, onClose }: Props) => {
     return () => window.removeEventListener('keydown', handler);
   }, [onClose]);
 
+  const title = project ? t(`${project.id}.title`) : '';
+  const description = project ? t(`${project.id}.description`) : '';
+
   return (
     <AnimatePresence>
       {project && (
@@ -38,36 +46,66 @@ export const ProjectModal = ({ project, onClose }: Props) => {
         >
           <motion.div
             layoutId={project.id}
-            className="bg-background border-accent-border/60 relative max-h-[90vh] w-[80vw] max-w-5xl overflow-y-auto rounded-2xl border px-6 py-12 md:px-8 md:py-16"
+            className="bg-background border-accent-border/60 relative max-h-svh w-[80vw] max-w-5xl overflow-y-auto rounded-2xl border px-6 py-12 md:px-8 md:py-16"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-7">
-              <div className="relative h-60 w-full overflow-hidden rounded-xl md:col-span-3 md:h-80">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-7 md:gap-8">
+              <div className="relative h-60 w-full overflow-hidden rounded-xl transition-all duration-300 hover:shadow-2xl md:col-span-3 md:h-90">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.id}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
 
-              <div className="flex flex-col md:col-span-4">
-                <h2 className="text-2xl font-bold tracking-tight md:text-3xl">{project.title}</h2>
+              <div className="text-primary-200 flex flex-col gap-4 md:col-span-4">
+                <h2 className="font-heading text-xl font-bold tracking-tight md:text-2xl xl:text-3xl">
+                  {title}
+                </h2>
 
-                <p className="text-muted-foreground mt-4 text-sm leading-relaxed md:text-base">
-                  {project.description}
-                </p>
+                <p className="font-body mt-2 text-sm leading-relaxed md:text-base">{description}</p>
 
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="mt-4 flex flex-wrap gap-3">
                   {project.techStack.map((tech) => (
-                    <span key={tech} className="border-border rounded-lg border px-3 py-1 text-xs">
+                    <span
+                      key={tech}
+                      className="border-border font-body hover:border-utility-bg rounded-lg border px-3 py-1 text-xs transition-all duration-300 hover:-translate-y-0.5 md:text-sm 2xl:text-base"
+                    >
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div className="font-body flex flex-col items-start gap-4 pt-4">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group text-primary-300 hover:text-accent-500 flex items-center gap-3 transition-colors duration-300"
+                  >
+                    <Code2 className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 2xl:h-6 2xl:w-6" />
+                    <span className="text-sm md:text-base 2xl:text-lg">
+                      {tButton(ButtonKey.VIEW_REPO)}
+                    </span>
+                  </a>
+
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group text-primary-300 hover:text-accent-500 flex items-center gap-3 transition-colors duration-300"
+                    >
+                      <ExternalLink className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 2xl:h-6 2xl:w-6" />
+                      <span className="text-sm md:text-base 2xl:text-lg">
+                        {tButton(ButtonKey.VIEW_LIVE)}
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
