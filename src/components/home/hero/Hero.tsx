@@ -1,16 +1,13 @@
-'use client';
 import { Container } from '@/components/ui/Container';
 import { FadeUp } from '@/components/common/animations/FadeUp';
 import { SubTitle } from '@/components/ui/SubTitle';
-import { ButtonKey, SubTitleKey, TitleKey } from '@/types/i18n/keys';
+import { SubTitleKey, TitleKey } from '@/types/i18n/keys';
 import { Title } from '@/components/ui/Title';
 import { AvatarCodeRing } from './AvatarCodeRing';
-import { Button } from '@/components/ui/Button';
 import { SectionKey } from '@/types/sectionTypes';
-import { useActiveSectionContext } from '@/context/ActiveSectionContext';
+import { HeroButtons } from './HeroButtons';
 
 export const Hero = () => {
-  const { scrollTo } = useActiveSectionContext();
   return (
     <Container id={SectionKey.HOME}>
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-6 lg:grid-cols-8">
@@ -21,20 +18,7 @@ export const Hero = () => {
             <Title variant="primary" i18nKey={TitleKey.HERO_TECH_STACK} className="my-2" />
             <SubTitle variant="primary" i18nKey={SubTitleKey.HERO} />
 
-            <div className="flex flex-wrap items-center justify-between gap-2 px-4 sm:px-16 md:justify-start md:px-0">
-              <Button
-                variant="primary"
-                onAction={() => scrollTo(SectionKey.CONTACT)}
-                i18nKey={ButtonKey.GET_IN_TOUCH}
-              />
-              <Button
-                as="link"
-                href="/CV/Onur_Ahmet_Yemez_CV.pdf"
-                download
-                variant="secondary"
-                i18nKey={ButtonKey.VIEW_CV}
-              />
-            </div>
+            <HeroButtons />
           </div>
         </FadeUp>
       </div>

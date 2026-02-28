@@ -50,7 +50,7 @@ export const renderContent = <T extends string>(
 
                 {isCertification && (
                   <Link
-                    className="text-primary-500 ml-auto p-2 transition-all duration-200 hover:scale-125 hover:text-orange-500"
+                    className="text-primary-500 ml-auto p-2 transition-all duration-200 group-hover:scale-125 group-hover:text-orange-500"
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"

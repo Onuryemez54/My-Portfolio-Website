@@ -1,4 +1,3 @@
-'use client';
 import { Container } from '@/components/ui/Container';
 import { SectionKey } from '@/types/sectionTypes';
 import { FadeLeftToRight } from '@/components/common/animations/FadeLeftToRight';

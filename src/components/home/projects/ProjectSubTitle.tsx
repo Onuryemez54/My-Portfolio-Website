@@ -1,5 +1,4 @@
 'use client';
-
 import { ProjectKey } from '@/types/i18n/keys';
 import { Project } from '@/types/projectType';
 import { ArrowRight } from 'lucide-react';
@@ -10,15 +9,21 @@ export const ProjectSubTitle = ({ project, onOpen }: { project: Project; onOpen:
   const title = t(`${project.id}.title`);
   const description = t(`${project.id}.description`);
   return (
-    <div className="group text-primary-200 flex h-full flex-col p-4">
+    <div className="text-primary-200 flex h-full flex-col p-4">
       <div className="flex gap-2">
         {project.techStack?.slice(0, 2).map((tech) => (
-          <span key={tech} className="border-border rounded-lg border px-3 py-1 text-xs">
+          <span
+            key={tech}
+            className="border-border group-hover:border-accent-500 rounded-lg border px-3 py-1 text-xs transition-all duration-300"
+          >
             {tech}
           </span>
         ))}
       </div>
-      <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+      <h3 className="relative mt-3 text-lg font-semibold">
+        {title}
+        <span className="bg-nav-active-foreground absolute -bottom-1 left-0 h-0.5 w-0 transition-[width] duration-300 group-hover:w-full" />
+      </h3>
 
       <p className="mt-2 line-clamp-2 text-sm">{description}</p>
 

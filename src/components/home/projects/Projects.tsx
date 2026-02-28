@@ -37,7 +37,7 @@ export const Projects = () => {
               delay={index * 0.2}
               initialY={30}
               initialScale={0.9}
-              duration={0.6}
+              duration={0.5}
             >
               <ProjectCard project={project} onOpen={() => setSelected(project)} />
             </ScrollReveal>
