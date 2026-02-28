@@ -22,7 +22,8 @@
     ],
     "ABOUT_ME": "Hakkımda",
     "PROJECTS": "Öne çıkan projelerim",
-    "CONTACT": "Bağlatı kuralım"
+    "CONTACT": "Bağlantı kuralım",
+    "NOT_FOUND": "Sayfa bulunamadı"
   },
   "SUB_TITLE": {
     "HERO": "Kullanıcı deneyimine, ölçeklenebilirliğe ve temiz mimariye güçlü bir şekilde odaklanarak modern, yüksek performanslı web arayüzleri tasarlıyorum.",
@@ -30,7 +31,8 @@
       "Güçlü bir mühendislik geçmişine sahip, modern ve ölçeklenebilir web uygulamaları geliştiren ön uç odaklı tam yığın geliştiricisiyim. React, TypeScript ve Next.js konusunda uzmanım, temiz, bakımı kolay ve üretime hazır arayüzler oluşturuyorum ve yeniden kullanılabilir bileşen mimarisi oluşturuyorum.",
       "Backend tarafında, Supabase ve Firebase gibi hizmetler kullanarak kimlik doğrulama akışlarını, veritabanı mantığını ve REST API'lerini entegre ediyorum ve eksiksiz tam yığın çözümler sunmak için özel Next.js rota işleyicileri kullanıyorum.",
       "Sürekli öğrenmeye ve performans odaklı geliştirmeye kendimi adadım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz ve güvenilir üretim sonuçları sağlıyorum."
-    ]
+    ],
+    "NOT_FOUND": "Üzgünüz, aradığınız sayfa mevcut değil. Lütfen ana sayfaya dönmeyi deneyin."
   },
 
   "TABS": {
@@ -116,7 +118,8 @@
     "SENDING": "Gönderiliyor...",
     "VIEW_DETAILS": "Detayları Görüntüle",
     "VIEW_LIVE": "Canlı Görüntüle",
-    "VIEW_REPO": "Depoyu Görüntüle"
+    "VIEW_REPO": "Depoyu Görüntüle",
+    "BACK_HOME": "Ana Sayfaya Dön"
   },
   "LIST_ITEM": {
     "RIGHTS": "Tüm hakları saklıdır.",

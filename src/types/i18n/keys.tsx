@@ -25,6 +25,7 @@ export enum TitleKey {
   CONTACT = 'CONTACT',
 
   FEEDBACK = 'FEEDBACK',
+  NOT_FOUND = 'NOT_FOUND',
 }
 
 export enum SubTitleKey {
@@ -36,6 +37,7 @@ export enum SubTitleKey {
   CONTACT = 'CONTACT',
 
   FEEDBACK = 'FEEDBACK',
+  NOT_FOUND = 'NOT_FOUND',
 }
 
 export enum ButtonKey {
@@ -48,6 +50,7 @@ export enum ButtonKey {
   VIEW_DETAILS = 'VIEW_DETAILS',
   VIEW_REPO = 'VIEW_REPO',
   VIEW_LIVE = 'VIEW_LIVE',
+  BACK_HOME = 'BACK_HOME',
 }
 
 export enum TabsKey {
