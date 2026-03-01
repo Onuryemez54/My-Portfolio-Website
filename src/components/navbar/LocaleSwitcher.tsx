@@ -24,21 +24,7 @@ export const LocaleSwitcher = () => {
 
   return (
     <Select value={locale} onValueChange={handleChange}>
-      <SelectTrigger
-        className={cn(
-          'group h-8 min-w-13 px-2 text-xs',
-          'sm:h-9 sm:min-w-15 sm:px-3 sm:text-sm',
-          'md:h-10 md:min-w-17 md:px-4 md:text-base',
-          'border-primary-700/60 rounded-full border',
-          'bg-primary-900/40 backdrop-blur-sm',
-          'text-nav-foreground font-semibold tracking-wide',
-          'transition-all duration-300',
-          'hover:border-accent-500/80 hover:bg-primary-800/50',
-          'data-[state=open]:border-primary-400 data-[state=open]:bg-primary-800/60',
-          'focus:ring-0 focus:outline-none',
-          'focus-visible:ring-0 focus-visible:outline-none'
-        )}
-      >
+      <SelectTrigger className="min-w-13 px-2 text-xs sm:min-w-15 sm:px-3 sm:text-sm md:min-w-17 md:px-4 md:text-base">
         <SelectValue />
         <ChevronDown
           className={cn(

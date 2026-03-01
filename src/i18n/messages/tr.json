@@ -23,6 +23,7 @@
     "ABOUT_ME": "Hakkımda",
     "PROJECTS": "Öne çıkan projelerim",
     "CONTACT": "Bağlantı kuralım",
+    "FEEDBACK": "Geri Bildirim Gönder",
     "NOT_FOUND": "Sayfa bulunamadı"
   },
   "SUB_TITLE": {
@@ -33,7 +34,8 @@
       "Sürekli öğrenmeye ve performans odaklı geliştirmeye kendimi adadım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz ve güvenilir üretim sonuçları sağlıyorum."
     ],
     "NOT_FOUND": "Üzgünüz, aradığınız sayfa mevcut değil. Lütfen ana sayfaya dönmeyi deneyin.",
-    "CONTACT": "Herhangi bir sorunuz, işbirliği teklifiniz veya sadece dostça selam vermek için benimle iletişime geçmekten çekinmeyin! Ben her zaman diğer geliştiriciler, potansiyel işverenler veya çalışmalarım hakkında ilgilenen herkesle bağlantı kurmaya açığım."
+    "CONTACT": "Herhangi bir sorunuz, işbirliği teklifiniz veya sadece dostça selam vermek için benimle iletişime geçmekten çekinmeyin! Ben her zaman diğer geliştiriciler, potansiyel işverenler veya çalışmalarım hakkında ilgilenen herkesle bağlantı kurmaya açığım.",
+    "FEEDBACK": "Geri bildiriminiz, bir geliştirici olarak gelişmeme ve büyümeme yardımcı olmak için çok değerlidir. Lütfen benimle geri bildirimlerinizi paylaşmaktan çekinmeyin!"
   },
 
   "TABS": {
@@ -115,12 +117,13 @@
     "GET_IN_TOUCH": "İletişime Geç",
     "VIEW_PROJECTS": "Projeleri Görüntüle",
     "VIEW_CV": "CV Görüntüle",
-    "SEND_FEEDBACK": "Görüş Gönder",
+    "SEND_FEEDBACK": "Geri Bildirim Gönder",
     "SENDING": "Gönderiliyor...",
     "VIEW_DETAILS": "Detayları Görüntüle",
     "VIEW_LIVE": "Canlı Görüntüle",
     "VIEW_REPO": "Depoyu Görüntüle",
-    "BACK_HOME": "Ana Sayfaya Dön"
+    "BACK_HOME": "Ana Sayfaya Dön",
+    "CLEAR": "Temizle"
   },
   "LIST_ITEM": {
     "RIGHTS": "Tüm hakları saklıdır.",
@@ -129,14 +132,45 @@
     "FOLLOW_ME": "Takipte Kalın"
   },
 
+  "FORM": {
+    "FIELD": {
+      "NAME": "Adınız",
+      "EMAIL": "E-posta Adresiniz",
+      "MESSAGE": "Mesajınız",
+      "TOPIC": "Geri Bildirim Konusu"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Lütfen adınızı girin",
+      "EMAIL": "Lütfen e-posta adresinizi girin",
+      "MESSAGE": "Lütfen mesajınızı yazın",
+      "TOPIC": "Lütfen bir konu seçin"
+    }
+  },
+
+  "FEEDBACK_TOPIC": {
+    "GENERAL": "Genel",
+    "PROJECT_INQUIRY": "Proje Sorgusu",
+    "JOB_OPPORTUNITY": "İş Fırsatı",
+    "FREELANCE_WORK": "Serbest Çalışma",
+    "COLLABORATION": "İş Birliği",
+    "BUG_REPORT": "Hata Raporu",
+    "OTHER": "Diğer"
+  },
+
   "ERROR": {
-    "FEEDBACK_SEND_FAILED": "Görüş gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+    "NAME_REQUIRED": "Ad alanı zorunludur.",
+    "EMAIL_REQUIRED": "E-posta alanı zorunludur.",
+    "EMAIL_INVALID": "Lütfen geçerli bir e-posta adresi girin.",
+    "MESSAGE_TOO_SHORT": "Mesaj en az 10 karakter olmalıdır.",
+    "MESSAGE_TOO_LONG": "Mesaj 500 karakterden az olmalıdır.",
+
+    "FEEDBACK_SEND_FAILED": "Geri bildirim gönderilemedi. Lütfen daha sonra tekrar deneyin.",
     "TOO_MANY_REQUESTS": "Çok fazla istek yapıldı. Lütfen yavaşlayın ve daha sonra tekrar deneyin.",
     "UNKNOWN": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin.",
     "INTERNAL_ERROR": "Teknik bir sorun yaşıyoruz. Lütfen kısa süre sonra tekrar deneyin."
   },
   "SUCCESS": {
-    "FEEDBACK_SENT": "Teşekkür ederiz! Görüşleriniz bizim için çok değerli."
+    "FEEDBACK_SENT": "Teşekkür ederiz! Geri bildiriminiz bizim için çok değerli."
   },
   "LOADING": {
     "DEFAULT": "Yükleniyor..."

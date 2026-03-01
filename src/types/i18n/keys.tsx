@@ -51,6 +51,7 @@ export enum ButtonKey {
   VIEW_REPO = 'VIEW_REPO',
   VIEW_LIVE = 'VIEW_LIVE',
   BACK_HOME = 'BACK_HOME',
+  CLEAR = 'CLEAR',
 }
 
 export enum TabsKey {
@@ -126,8 +127,34 @@ export enum ProjectKey {
   TITLE = 'PROJECTS',
 }
 
+export enum FormKey {
+  TOPIC = 'TOPIC',
+  NAME = 'NAME',
+  EMAIL = 'EMAIL',
+  MESSAGE = 'MESSAGE',
+}
+
+export const FeedbackTopicKey = {
+  GENERAL: 'GENERAL',
+  PROJECT_INQUIRY: 'PROJECT_INQUIRY',
+  JOB_OPPORTUNITY: 'JOB_OPPORTUNITY',
+  FREELANCE_WORK: 'FREELANCE_WORK',
+  COLLABORATION: 'COLLABORATION',
+  BUG_REPORT: 'BUG_REPORT',
+  OTHER: 'OTHER',
+} as const;
+
+export type FeedbackTopicKey = (typeof FeedbackTopicKey)[keyof typeof FeedbackTopicKey];
+
 export enum ErrorKey {
   TITLE = 'ERROR',
+
+  // Form validation
+  NAME_REQUIRED = 'NAME_REQUIRED',
+  EMAIL_REQUIRED = 'EMAIL_REQUIRED',
+  EMAIL_INVALID = 'EMAIL_INVALID',
+  MESSAGE_TOO_SHORT = 'MESSAGE_TOO_SHORT',
+  MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG',
 
   // Generic
   FEEDBACK_SEND_FAILED = 'FEEDBACK_SEND_FAILED',

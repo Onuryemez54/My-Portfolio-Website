@@ -2,7 +2,6 @@
 import * as React from 'react';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from 'lucide-react';
-
 import { cn } from '@/utils/cn';
 
 function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {
@@ -30,8 +29,19 @@ function SelectTrigger({
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "border-input data-placeholder:text-primary-300 [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-1 rounded-md border bg-transparent px-3 py-2 whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        'bg-primary-700/60 text-primary-50 border-primary-600 focus:ring-primary-400 hover:ring-primary-400 cursor-pointer resize-none border text-xs transition-all duration-300 hover:ring-1 focus:ring-1 focus:outline-none sm:text-sm lg:text-base',
+        'flex items-center justify-between gap-1 outline-none disabled:cursor-not-allowed disabled:opacity-50',
+        'group',
+        'h-8 sm:h-9 md:h-10',
+        'border-primary-700 rounded-full border',
+        'bg-primary-900/40 text-primary-200 font-medium tracking-wide backdrop-blur-sm',
+        'transition-all duration-300',
+        'hover:border-accent-500/80 hover:bg-primary-800/50',
+        'data-[state=open]:border-primary-400 data-[state=open]:bg-primary-800/60',
+        'focus:ring-0 focus:outline-none',
+        'focus-visible:ring-0 focus-visible:outline-none',
+        '*:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2',
+        '[&_[data-slot=select-value]]:text-xs sm:[&_[data-slot=select-value]]:text-sm md:[&_[data-slot=select-value]]:text-base',
+        "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -55,7 +65,7 @@ function SelectContent({
         className={cn(
           'bg-primary-800/95 text-primary-100 border-primary-700/60 border shadow-xl backdrop-blur-md',
           'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95',
-          'relative z-50 min-w-10 overflow-hidden rounded-lg',
+          'relative z-50 max-w-sm min-w-10 overflow-hidden rounded-2xl',
           position === 'popper' &&
             'text-xs data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1 sm:text-sm md:text-base',
           className
@@ -84,7 +94,7 @@ function SelectLabel({ className, ...props }: React.ComponentProps<typeof Select
   return (
     <SelectPrimitive.Label
       data-slot="select-label"
-      className={cn('text-muted-foreground px-2 py-1.5 text-xs', className)}
+      className={cn('text-primary-200 px-2 py-1.5 text-xs', className)}
       {...props}
     />
   );
@@ -99,9 +109,9 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        'text-primary-200 relative flex w-full cursor-pointer items-center justify-between gap-2 rounded-md px-3 py-2 text-sm select-none',
+        'text-primary-200 relative flex w-full cursor-pointer items-center justify-between gap-2 rounded-md px-3 py-2 select-none',
         'focus:bg-primary-700/80 focus:text-accent-400 hover:bg-primary-700/70 transition-colors duration-200 outline-none',
-        'large:text-base text-xs data-disabled:pointer-events-none data-disabled:opacity-50 sm:text-sm',
+        'data-disabled:pointer-events-none data-disabled:opacity-50',
         className
       )}
       {...props}
@@ -109,7 +119,7 @@ function SelectItem({
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
 
       <SelectPrimitive.ItemIndicator>
-        <CheckIcon className="w-4 h-4 text-accent-400" />
+        <CheckIcon className="text-accent-400 h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>
   );

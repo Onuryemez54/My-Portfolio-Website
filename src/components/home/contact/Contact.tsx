@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <Container id={SectionKey.CONTACT}>
       <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid items-center gap-16 md:grid-cols-6 xl:grid-cols-7">
+        <div className="grid gap-16 md:grid-cols-6 xl:grid-cols-7">
           <ContactInfo />
           <ContactForm />
         </div>

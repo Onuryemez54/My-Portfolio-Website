@@ -23,6 +23,7 @@
     "ABOUT_ME": "About Me",
     "PROJECTS": "My featured projects",
     "CONTACT": "Let's Connect",
+    "FEEDBACK": "Send Feedback",
     "NOT_FOUND": "Page Not Found"
   },
   "SUB_TITLE": {
@@ -33,7 +34,8 @@
       "I am committed to continuous learning and performance-driven development. I actively collaborate within teams using Git-based workflows, contributing through structured commits, pull requests, and code reviews to ensure clean and reliable production outcomes."
     ],
     "NOT_FOUND": "Sorry, the page you are looking for does not exist. Please try returning to the homepage.",
-    "CONTACT": "Feel free to reach out to me for any inquiries, collaborations, or just a friendly hello! I'm always open to connecting with fellow developers, potential employers, or anyone interested in my work."
+    "CONTACT": "Feel free to reach out to me for any inquiries, collaborations, or just a friendly hello! I'm always open to connecting with fellow developers, potential employers, or anyone interested in my work.",
+    "FEEDBACK": "Your input is invaluable in helping me improve and grow as a developer. Please don't hesitate to share your feedback with me!"
   },
 
   "TABS": {
@@ -85,7 +87,8 @@
     "VIEW_DETAILS": "View Details",
     "VIEW_LIVE": "View Live",
     "VIEW_REPO": "View Repository",
-    "BACK_HOME": "Back to Home"
+    "BACK_HOME": "Back to Home",
+    "CLEAR": "Clear"
   },
   "LIST_ITEM": {
     "RIGHTS": "All rights reserved.",
@@ -129,7 +132,38 @@
     }
   },
 
+  "FORM": {
+    "FIELD": {
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "MESSAGE": "Message",
+      "TOPIC": "Topic"
+    },
+    "PLACEHOLDER": {
+      "NAME": "Please enter your name",
+      "EMAIL": "Please enter your email",
+      "MESSAGE": "Please enter your message",
+      "TOPIC": "Please select a topic"
+    }
+  },
+
+  "FEEDBACK_TOPIC": {
+    "GENERAL": "General",
+    "PROJECT_INQUIRY": "Project Inquiry",
+    "JOB_OPPORTUNITY": "Job Opportunity",
+    "FREELANCE_WORK": "Freelance Work",
+    "COLLABORATION": "Collaboration",
+    "BUG_REPORT": "Bug Report",
+    "OTHER": "Other"
+  },
+
   "ERROR": {
+    "NAME_REQUIRED": "Name is required.",
+    "EMAIL_REQUIRED": "Email is required.",
+    "EMAIL_INVALID": "Please enter a valid email address.",
+    "MESSAGE_TOO_SHORT": "Message must be at least 10 characters.",
+    "MESSAGE_TOO_LONG": "Message must be less than 500 characters.",
+
     "FEEDBACK_SEND_FAILED": "Failed to send feedback. Please try again later.",
     "TOO_MANY_REQUESTS": "Too many requests. Please slow down and try again later.",
     "UNKNOWN": "Something went wrong. Please try again later.",
