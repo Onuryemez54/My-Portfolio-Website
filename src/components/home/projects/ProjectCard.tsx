@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project, onOpen }: ProjectCardProps) => {
   return (
-    <div className="group hover:shadow-primary-500 bg-background ring-primary-500 hover:ring-accent-500 relative overflow-hidden rounded-2xl ring-1 transition-all duration-300 hover:shadow-lg hover:ring-2">
+    <div className="group hover:shadow-primary-500 bg-background ring-primary-600 hover:ring-accent-500 relative overflow-hidden rounded-2xl ring-2 transition-all duration-300 hover:shadow-lg hover:ring-3">
       <div className="relative aspect-4/3 w-full overflow-hidden rounded-t-2xl border-b-2 border-gray-400/60">
         <Image
           src={project.image}

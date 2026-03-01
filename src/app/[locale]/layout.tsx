@@ -53,7 +53,7 @@ const LocaleLayout = async ({ children, params }: LayoutProps) => {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <ToastProvider>
-        <div className="from-primary-900 via-primary-700 to-primary-600 text-primary-50 relative mx-auto flex min-h-svh max-w-480 flex-col overflow-x-hidden bg-linear-to-b">
+        <div className="from-primary-900 via-primary-700 to-primary-900 text-primary-50 relative mx-auto flex min-h-svh max-w-480 flex-col overflow-x-hidden bg-linear-to-b">
           <NavbarSection />
 
           <main className="flex-1 overflow-y-auto">{children}</main>

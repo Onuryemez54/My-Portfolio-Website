@@ -2,7 +2,6 @@
 import { ReactNode } from 'react';
 import { SectionKey } from '@/types/sectionTypes';
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import { ScrollReveal } from '../common/animations/ScrollReveal';
 import { cn } from '@/utils/cn';
 
 interface ContainerProps {
@@ -17,35 +16,20 @@ export const Container = ({ children, className, id }: ContainerProps) => {
   const { registerSection } = useActiveSectionContext();
 
   const isHeroSection = id === SectionKey.HOME;
-  const isAboutSection = id === SectionKey.ABOUT;
   const isProjectsSection = id === SectionKey.PROJECTS;
+  const isContactSection = id === SectionKey.CONTACT;
+
   const sectionStyles = isHeroSection
     ? 'py-24 sm:py-32 '
     : isProjectsSection
-      ? 'py-6  xl:py-8'
-      : 'py-8 sm:py-12 md:py-14 lg:py-16';
-
-  if (isHeroSection || isAboutSection || isProjectsSection) {
-    return (
-      <section
-        id={id}
-        ref={registerSection(id)}
-        className={cn(baseStyles, sectionStyles, className)}
-      >
-        {children}
-      </section>
-    );
-  }
+      ? 'pt-6 pb-12 xl:pb-16 xl:pt-8'
+      : isContactSection
+        ? 'pt-8 pb-14 sm:pt-12 sm:pb-20 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28'
+        : 'py-8 sm:py-12 md:py-14 lg:py-16';
 
   return (
-    <ScrollReveal delay={0.2}>
-      <section
-        id={id}
-        ref={registerSection(id)}
-        className={cn(baseStyles, sectionStyles, className)}
-      >
-        {children}
-      </section>
-    </ScrollReveal>
+    <section id={id} ref={registerSection(id)} className={cn(baseStyles, sectionStyles, className)}>
+      {children}
+    </section>
   );
 };

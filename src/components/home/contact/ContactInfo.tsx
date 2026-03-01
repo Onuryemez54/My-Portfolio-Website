@@ -1,0 +1,19 @@
+import { FadeLeftToRight } from '@/components/common/animations/FadeLeftToRight';
+import { SubTitleKey, TitleKey } from '@/types/i18n/keys';
+import { Title } from '@/components/ui/Title';
+import { SubTitle } from '@/components/ui/SubTitle';
+import { AnimatedInfoIcons } from './AnimatedInfoIcons';
+
+export const ContactInfo = () => {
+  return (
+    <FadeLeftToRight delay={0.1} className="md:col-span-3 xl:col-span-4">
+      <div className="flex flex-col gap-2">
+        <>
+          <Title variant="secondary" i18nKey={TitleKey.CONTACT} underline />
+          <SubTitle variant="secondary" i18nKey={SubTitleKey.CONTACT} />
+        </>
+        <AnimatedInfoIcons />
+      </div>
+    </FadeLeftToRight>
+  );
+};

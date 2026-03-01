@@ -32,7 +32,8 @@
       "Backend tarafında, Supabase ve Firebase gibi hizmetler kullanarak kimlik doğrulama akışlarını, veritabanı mantığını ve REST API'lerini entegre ediyorum ve eksiksiz tam yığın çözümler sunmak için özel Next.js rota işleyicileri kullanıyorum.",
       "Sürekli öğrenmeye ve performans odaklı geliştirmeye kendimi adadım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz ve güvenilir üretim sonuçları sağlıyorum."
     ],
-    "NOT_FOUND": "Üzgünüz, aradığınız sayfa mevcut değil. Lütfen ana sayfaya dönmeyi deneyin."
+    "NOT_FOUND": "Üzgünüz, aradığınız sayfa mevcut değil. Lütfen ana sayfaya dönmeyi deneyin.",
+    "CONTACT": "Herhangi bir sorunuz, işbirliği teklifiniz veya sadece dostça selam vermek için benimle iletişime geçmekten çekinmeyin! Ben her zaman diğer geliştiriciler, potansiyel işverenler veya çalışmalarım hakkında ilgilenen herkesle bağlantı kurmaya açığım."
   },
 
   "TABS": {
