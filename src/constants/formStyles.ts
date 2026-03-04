@@ -13,8 +13,6 @@ export const inputClasses = `
     rounded-full
   `;
 
-export const errorInputClasses = 'border-accent-500 focus:ring-accent-500';
-
 //  textarea
 export const textareaClasses = `
     border-primary-500

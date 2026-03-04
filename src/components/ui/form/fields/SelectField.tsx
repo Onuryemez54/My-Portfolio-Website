@@ -10,7 +10,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { TranslatedFormMessage } from '../TranslatedFormMessage';
 import { cn } from '@/utils/cn';
-import { inputClasses, errorInputClasses } from '@/constants/formStyles';
+import { inputClasses } from '@/constants/formStyles';
 import { FormKey } from '@/types/i18n/keys';
 import { ChevronDown } from 'lucide-react';
 
@@ -40,16 +40,13 @@ export const SelectField = ({
   return (
     <FormField
       name={name}
-      render={({ field, fieldState }) => (
+      render={({ field }) => (
         <FormItem>
           <FormLabel className="text-primary-200">{tField(labelKey)}</FormLabel>
 
           <FormControl>
             <Select value={field.value ?? ''} onValueChange={field.onChange} disabled={disabled}>
-              <SelectTrigger
-                className={cn(inputClasses, fieldState.error && errorInputClasses)}
-                data-testid={testId}
-              >
+              <SelectTrigger className={inputClasses} data-testid={testId}>
                 <SelectValue placeholder={tPlaceholder(labelKey) as string} />
                 <ChevronDown
                   className={cn(

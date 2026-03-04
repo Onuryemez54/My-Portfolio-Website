@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { TranslatedFormMessage } from '../TranslatedFormMessage';
 import { FormKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
-import { errorInputClasses, textareaClasses } from '@/constants/formStyles';
+import { textareaClasses } from '@/constants/formStyles';
 
 interface TextareaFieldProps {
   name: string;
@@ -30,7 +30,7 @@ export const TextareaField = ({
   return (
     <FormField
       name={name}
-      render={({ field, fieldState }) => (
+      render={({ field }) => (
         <FormItem>
           <FormLabel className="text-primary-200">{tField(labelKey)}</FormLabel>
 
@@ -42,11 +42,7 @@ export const TextareaField = ({
               disabled={disabled}
               value={field.value ?? ''}
               placeholder={placeholderKey ? tPlaceholder(placeholderKey) : undefined}
-              className={cn(
-                textareaClasses,
-                fieldState.error && errorInputClasses,
-                disabled && 'cursor-not-allowed opacity-60'
-              )}
+              className={cn(textareaClasses, disabled && 'cursor-not-allowed opacity-60')}
             />
           </FormControl>
 

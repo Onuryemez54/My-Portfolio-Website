@@ -4,8 +4,7 @@ import { FormField, FormItem, FormLabel, FormControl } from '@/components/ui/sha
 import { Input } from '@/components/ui/shadcn/input';
 import { FormKey } from '@/types/i18n/keys';
 import { TranslatedFormMessage } from '../TranslatedFormMessage';
-import { cn } from '@/utils/cn';
-import { errorInputClasses, inputClasses } from '@/constants/formStyles';
+import { inputClasses } from '@/constants/formStyles';
 
 interface TextFieldProps {
   name: string;
@@ -33,7 +32,7 @@ export const TextField = ({
   return (
     <FormField
       name={name}
-      render={({ field, fieldState }) => (
+      render={({ field }) => (
         <FormItem>
           <FormLabel className="text-primary-200">{tField(labelKey)}</FormLabel>
           <FormControl>
@@ -44,7 +43,7 @@ export const TextField = ({
               value={field.value ?? ''}
               type={type}
               disabled={disabled}
-              className={cn(inputClasses, fieldState.error && errorInputClasses)}
+              className={inputClasses}
               readOnly={readOnly}
               data-testid={testId}
             />

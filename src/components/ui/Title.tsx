@@ -71,7 +71,8 @@ export const Title = ({ variant, className, i18nKey, underline }: TitleProps) =>
         baseClass,
         variantStyles[variant],
         className,
-        underline && 'decoration-accent-400 underline decoration-4 underline-offset-4'
+        underline &&
+          'decoration-accent-400 underline decoration-1 underline-offset-4 xl:decoration-2 2xl:decoration-4'
       )}
     >
       {t(i18nKey)}

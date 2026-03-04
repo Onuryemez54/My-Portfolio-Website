@@ -80,9 +80,14 @@ export const ContactForm = () => {
     }
   };
   return (
-    <FadeRightToLeft delay={0.3} className="items-center md:col-span-3">
+    <FadeRightToLeft delay={0.3} className="max-w-md items-center md:col-span-3">
       <div className="from-primary-700/50 to-primary-800/50 text-primary-200 font-body w-full rounded-2xl bg-linear-to-br p-6 shadow-2xl">
-        <Title variant="secondary" className="pt-1 text-center" i18nKey={TitleKey.FEEDBACK} />
+        <Title
+          variant="secondary"
+          className="pt-1 text-center"
+          i18nKey={TitleKey.FEEDBACK}
+          underline
+        />
 
         <SubTitle variant="tertiary" className="-mt-4" i18nKey={SubTitleKey.FEEDBACK} />
 

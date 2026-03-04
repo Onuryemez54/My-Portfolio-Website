@@ -1,10 +1,3 @@
-export enum BrandKey {
-  TITLE = 'BRAND',
-  PREFIX = 'PREFIX',
-  NAME = 'NAME',
-  SUFFIX = 'SUFFIX',
-}
-
 export enum NavKey {
   TITLE = 'NAV',
   HOME = 'HOME',

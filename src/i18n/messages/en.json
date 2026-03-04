@@ -1,9 +1,4 @@
 {
-  "BRAND": {
-    "PREFIX": "My",
-    "NAME": "Portfolio",
-    "SUFFIX": "Website"
-  },
   "NAV": {
     "HOME": "Home",
     "ABOUT": "About",

@@ -3,7 +3,7 @@ import { ContentItem } from '@/constants/expertise';
 import { listItemVariants, listVariants } from '@/constants/listVariants';
 import { TabContentKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
-import { isDownloadableCertification } from '@/utils/isDownloadableCertification ';
+import { isDownloadableCertification } from '@/utils/isDownloadableCertification';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Download } from 'lucide-react';
