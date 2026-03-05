@@ -8,6 +8,8 @@ import { formatTopicLabel } from '@/utils/formatTopicLabel';
 import { feedbackEmailTemplate } from '@/utils/feedbackEmailTemplate';
 
 export const sendFeedback = async (data: FormData): Promise<ActionResultType> => {
+  const isCI = process.env.CI === 'true';
+
   if (!process.env.RESEND_API_KEY) {
     console.warn('Missing RESEND_API_KEY, skipping email send');
     return { ok: true };
@@ -27,13 +29,15 @@ export const sendFeedback = async (data: FormData): Promise<ActionResultType> =>
     return { ok: true };
   }
 
-  const rateLimitResult = await enforceRateLimit({
-    action: 'portfolio-feedback',
-    email: parsedData.email,
-  });
+  if (!isCI) {
+    const rateLimitResult = await enforceRateLimit({
+      action: 'portfolio-feedback',
+      email: parsedData.email,
+    });
 
-  if (!rateLimitResult.ok) {
-    return rateLimitResult;
+    if (!rateLimitResult.ok) {
+      return rateLimitResult;
+    }
   }
 
   const prettyTopic = formatTopicLabel(parsedData.topic);
