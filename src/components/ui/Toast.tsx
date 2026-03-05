@@ -62,7 +62,12 @@ export const Toast = ({ type, message, duration, progress, onClose }: ToastItemT
           {toastIcon[type]}
         </div>
 
-        <p className="3xl:text-base flex-1 text-xs font-semibold md:text-sm">{message}</p>
+        <p
+          data-testid="toast-message"
+          className="3xl:text-base flex-1 text-xs font-semibold md:text-sm"
+        >
+          {message}
+        </p>
 
         <button
           type="button"

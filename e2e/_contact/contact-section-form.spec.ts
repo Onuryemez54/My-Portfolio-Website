@@ -69,7 +69,9 @@ test.describe('Contact Form', () => {
     await expect(submitButton).toBeEnabled();
     await submitButton.click();
 
-    await expect(page.getByText(/your feedback means a lot to us/i)).toBeVisible({
+    const toastMessage = page.getByTestId('toast-message');
+
+    await expect(toastMessage).toBeVisible({
       timeout: 15_000,
     });
   });
