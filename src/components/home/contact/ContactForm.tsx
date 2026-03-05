@@ -23,6 +23,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { FeedbackInput, feedbackSchema } from '@/types/schemas/feedbackSchema';
+import { sendFeedback } from '@/lib/feedback-action/sendFeedback';
 
 export const ContactForm = () => {
   const router = useRouter();
@@ -41,7 +42,7 @@ export const ContactForm = () => {
       name: '',
       email: '',
       message: '',
-      company: '', // Honeypot field
+      company: '',
     },
   });
 
@@ -50,6 +51,7 @@ export const ContactForm = () => {
   const watchName = form.watch('name');
 
   const canSubmit = !!watchMessage && !!watchEmail && !!watchName && !isPending;
+  const canReset = (!!watchMessage || !!watchEmail || !!watchName) && !isPending;
 
   const resetForm = () => {
     form.reset({
@@ -69,9 +71,15 @@ export const ContactForm = () => {
       formData.append('name', data.name);
       formData.append('email', data.email);
       formData.append('message', data.message);
-      formData.append('company', data.company ?? ''); // Honeypot field
+      formData.append('company', data.company ?? '');
 
-      console.log('feedback form data:', formData);
+      const result = await sendFeedback(formData);
+
+      if (!result.ok) {
+        toast.error(tE(result.error));
+        return;
+      }
+
       toast.success(tS(SuccessKey.FEEDBACK_SENT), 2000, true);
       router.refresh();
     } finally {
@@ -124,7 +132,7 @@ export const ContactForm = () => {
             <Button
               type="button"
               variant="tertiary"
-              disabled={!watchMessage || isPending}
+              disabled={!canReset}
               i18nKey={ButtonKey.CLEAR}
               onAction={resetForm}
             />

@@ -1,7 +1,7 @@
 'use client';
 import { useFormField } from '@/components/ui/shadcn/form';
 import { useTranslations } from 'next-intl';
-import { ErrorKey, FormKey } from '@/types/i18n/keys';
+import { ErrorKey } from '@/types/i18n/keys';
 import { cn } from '@/utils/cn';
 
 const baseErrorClass =
@@ -15,7 +15,7 @@ export const TranslatedFormMessage = () => {
 
   return (
     <p role="alert" className={cn(baseErrorClass)}>
-      {t(error.message as FormKey)}
+      {t(error.message as ErrorKey)}
     </p>
   );
 };

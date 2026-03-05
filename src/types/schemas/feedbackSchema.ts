@@ -16,7 +16,7 @@ export const feedbackSchema = z.object({
     .min(10, { message: ErrorKey.MESSAGE_TOO_SHORT })
     .max(500, { message: ErrorKey.MESSAGE_TOO_LONG }),
 
-  company: z.string().optional(), // Honeypot field
+  company: z.string().optional(),
 });
 
 export type FeedbackInput = z.infer<typeof feedbackSchema>;
