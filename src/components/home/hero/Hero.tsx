@@ -14,9 +14,9 @@ export const Hero = () => {
         <AvatarCodeRing />
         <FadeUp className="md:col-span-4 lg:col-span-5">
           <div className="min-w-0">
-            <Title variant="primary" i18nKey={TitleKey.HERO} />
+            <Title testId="hero-title" variant="primary" i18nKey={TitleKey.HERO} />
             <Title variant="primary" i18nKey={TitleKey.HERO_TECH_STACK} className="my-2" />
-            <SubTitle variant="primary" i18nKey={SubTitleKey.HERO} />
+            <SubTitle testId="hero-subtitle" variant="primary" i18nKey={SubTitleKey.HERO} />
 
             <HeroButtons />
           </div>

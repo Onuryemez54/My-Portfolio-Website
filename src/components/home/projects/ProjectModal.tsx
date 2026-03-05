@@ -45,6 +45,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           onClick={onClose}
         >
           <motion.div
+            data-testid={`project-modal-${project.id}`}
             layoutId={project.id}
             className="bg-background border-accent-border/60 relative max-h-[95vh] w-[80vw] max-w-5xl overflow-y-auto rounded-2xl border px-6 py-12 md:px-8 md:py-16"
             initial={{ scale: 0.8, opacity: 0 }}

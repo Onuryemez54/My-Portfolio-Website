@@ -10,6 +10,7 @@ export const HeroButtons = () => {
   return (
     <div className="flex flex-wrap items-center justify-between gap-2 px-4 sm:px-16 md:justify-start md:px-0">
       <Button
+        testId="hero-cta"
         variant="primary"
         onAction={() => scrollTo(SectionKey.CONTACT)}
         i18nKey={ButtonKey.GET_IN_TOUCH}

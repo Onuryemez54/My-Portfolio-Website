@@ -20,12 +20,17 @@ export const ProjectSubTitle = ({ project, onOpen }: { project: Project; onOpen:
           </span>
         ))}
       </div>
-      <h3 className="relative mt-3 text-lg font-semibold">
+      <h3
+        data-testid={`project-${project.id}-title`}
+        className="relative mt-3 text-lg font-semibold"
+      >
         {title}
         <span className="bg-nav-active-foreground absolute -bottom-1 left-0 h-0.5 w-0 transition-[width] duration-300 group-hover:w-full" />
       </h3>
 
-      <p className="mt-2 line-clamp-2 text-sm">{description}</p>
+      <p data-testid={`project-${project.id}-desc`} className="mt-2 line-clamp-2 text-sm">
+        {description}
+      </p>
 
       <div className="mt-auto flex justify-end">
         <span

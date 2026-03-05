@@ -31,6 +31,7 @@ export const TabList = <T extends string>({ tabs, activeTab, onChange }: TabList
           <Fragment key={String(tab.key)}>
             <motion.li variants={tabItemVariants}>
               <AnimatedNavButton
+                testId={`tab-${tab.key.toLowerCase()}`}
                 label={label}
                 isActive={isActive}
                 onClick={() => onChange(tab.key)}

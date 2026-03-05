@@ -13,6 +13,7 @@ interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
   className?: string;
   i18nKey: i18nKey;
   underline?: boolean;
+  testId?: string;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -26,12 +27,12 @@ const variantStyles: Record<Variant, string> = {
 
 const baseClass = 'leading-tight tracking-tight capitalize';
 
-export const Title = ({ variant, className, i18nKey, underline }: TitleProps) => {
+export const Title = ({ variant, className, i18nKey, underline, testId }: TitleProps) => {
   const t = useTranslations(TitleKey.TITLE);
 
   if (i18nKey === TitleKey.HERO) {
     return (
-      <h1 className={cn(baseClass, variantStyles[variant], className)}>
+      <h1 className={cn(baseClass, variantStyles[variant], className)} data-testid={testId}>
         {t.rich(i18nKey, {
           highlight: (chunk) => <span className="text-accent-400">{chunk}</span>,
         })}
@@ -42,7 +43,7 @@ export const Title = ({ variant, className, i18nKey, underline }: TitleProps) =>
   if (i18nKey === TitleKey.HERO_TECH_STACK) {
     const techStacks = t.raw(i18nKey) as string[];
     return (
-      <h1 className={cn(baseClass, variantStyles[variant], className)}>
+      <h1 className={cn(baseClass, variantStyles[variant], className)} data-testid={testId}>
         <span className="text-primary-200 block leading-tight">
           <span className="inline-block w-full text-center md:text-left lg:w-[28ch]">
             <TypeAnimation
@@ -74,6 +75,7 @@ export const Title = ({ variant, className, i18nKey, underline }: TitleProps) =>
         underline &&
           'decoration-accent-400 underline decoration-1 underline-offset-4 xl:decoration-2 2xl:decoration-4'
       )}
+      data-testid={testId}
     >
       {t(i18nKey)}
     </h2>

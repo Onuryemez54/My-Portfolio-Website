@@ -31,6 +31,7 @@ export const ProjectFilterTabs = ({ activeTech, setActiveTech }: ProjectFilterTa
           <Fragment key={String(tech)}>
             <motion.li variants={tabItemVariants}>
               <AnimatedNavButton
+                testId={`projects-tab-${tech.toLowerCase()}`}
                 label={label}
                 isActive={isActive}
                 onClick={() => setActiveTech(tech)}

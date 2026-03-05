@@ -17,7 +17,13 @@ export const AnimatedInfoIcons = () => {
       {contactIcons.map((icon) => (
         <motion.li key={icon.name} variants={iconVariants}>
           <div className="rounded-full bg-gray-200 p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 md:p-2.5 lg:p-3">
-            <Link href={icon.url} target="_blank" rel="noopener noreferrer" aria-label={icon.name}>
+            <Link
+              data-testid={`contact-icon-${icon.name.toLowerCase()}`}
+              href={icon.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={icon.name}
+            >
               <icon.icon className={cn(icon.color, 'h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6')} />
             </Link>
           </div>

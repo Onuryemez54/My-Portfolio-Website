@@ -91,16 +91,23 @@ export const ContactForm = () => {
     <FadeRightToLeft delay={0.3} className="max-w-md items-center md:col-span-3">
       <div className="from-primary-700/50 to-primary-800/50 text-primary-200 font-body w-full rounded-2xl bg-linear-to-br p-6 shadow-2xl">
         <Title
+          testId="contact-form-title"
           variant="secondary"
           className="pt-1 text-center"
           i18nKey={TitleKey.FEEDBACK}
           underline
         />
 
-        <SubTitle variant="tertiary" className="-mt-4" i18nKey={SubTitleKey.FEEDBACK} />
+        <SubTitle
+          testId="contact-form-subtitle"
+          variant="tertiary"
+          className="-mt-4"
+          i18nKey={SubTitleKey.FEEDBACK}
+        />
 
-        <Form form={form} onSubmit={onSubmit}>
+        <Form form={form} onSubmit={onSubmit} testId="contact-form">
           <SelectField
+            testId="contact-topic"
             name="topic"
             labelKey={FormKey.TOPIC}
             options={Object.values(FeedbackTopicKey).map((topic) => ({
@@ -110,9 +117,16 @@ export const ContactForm = () => {
             disabled={isPending}
           />
 
-          <TextField name="name" labelKey={FormKey.NAME} autoComplete="name" disabled={isPending} />
+          <TextField
+            testId="contact-name"
+            name="name"
+            labelKey={FormKey.NAME}
+            autoComplete="name"
+            disabled={isPending}
+          />
 
           <TextField
+            testId="contact-email"
             name="email"
             labelKey={FormKey.EMAIL}
             autoComplete="email"
@@ -120,6 +134,7 @@ export const ContactForm = () => {
           />
 
           <TextareaField
+            testId="contact-message"
             name="message"
             labelKey={FormKey.MESSAGE}
             placeholderKey={FormKey.MESSAGE}
@@ -130,6 +145,7 @@ export const ContactForm = () => {
 
           <div className="flex items-center justify-between pt-2">
             <Button
+              testId="contact-reset"
               type="button"
               variant="tertiary"
               disabled={!canReset}
@@ -137,6 +153,7 @@ export const ContactForm = () => {
               onAction={resetForm}
             />
             <Button
+              testId="contact-submit"
               type="submit"
               variant="primary"
               disabled={!canSubmit}

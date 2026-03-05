@@ -30,6 +30,7 @@ export const renderContent = <T extends string>(
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
           className={cn(listClasses, 'mt-3 grid items-center')}
+          data-testid={`content-${activeKey.toLowerCase()}`}
         >
           {items.map(({ label, icon: Icon }) => {
             const isCertification = isExpertise && isDownloadableCertification(label);

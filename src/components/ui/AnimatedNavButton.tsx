@@ -7,6 +7,7 @@ type AnimatedNavButtonProps = {
   onClick?: () => void;
   size?: 'tab' | 'nav';
   className?: string;
+  testId?: string;
 };
 
 export const AnimatedNavButton = ({
@@ -15,6 +16,7 @@ export const AnimatedNavButton = ({
   onClick,
   size = 'nav',
   className,
+  testId,
 }: AnimatedNavButtonProps) => {
   const sizeStyles =
     size === 'tab'
@@ -23,6 +25,7 @@ export const AnimatedNavButton = ({
 
   return (
     <button
+      data-testid={testId}
       onClick={onClick}
       className={cn(
         'group relative font-semibold transition-all duration-300',

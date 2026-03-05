@@ -9,8 +9,8 @@ export const ContactInfo = () => {
     <FadeLeftToRight delay={0.1} className="items-start md:col-span-3 md:mt-20 xl:col-span-4">
       <div className="flex flex-col gap-2">
         <>
-          <Title variant="secondary" i18nKey={TitleKey.CONTACT} underline />
-          <SubTitle variant="secondary" i18nKey={SubTitleKey.CONTACT} />
+          <Title testId="contact-title" variant="secondary" i18nKey={TitleKey.CONTACT} underline />
+          <SubTitle testId="contact-subtitle" variant="secondary" i18nKey={SubTitleKey.CONTACT} />
         </>
         <AnimatedInfoIcons />
       </div>

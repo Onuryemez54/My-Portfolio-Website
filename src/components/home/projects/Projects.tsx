@@ -25,7 +25,12 @@ export const Projects = () => {
     <Container id={SectionKey.PROJECTS}>
       <div className="flex flex-col items-center justify-center gap-3">
         <FadeUp initialY={20}>
-          <Title variant="secondary" i18nKey={TitleKey.PROJECTS} underline />
+          <Title
+            testId="projects-title"
+            variant="secondary"
+            i18nKey={TitleKey.PROJECTS}
+            underline
+          />
         </FadeUp>
 
         <ProjectFilterTabs activeTech={activeTech} setActiveTech={setActiveTech} />

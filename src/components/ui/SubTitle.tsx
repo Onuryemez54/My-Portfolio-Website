@@ -13,7 +13,7 @@ interface SubTitleProps extends HTMLAttributes<HTMLParagraphElement> {
   children?: ReactNode;
   className?: string;
   i18nKey: i18nKey;
-  values?: Record<string, string | number>;
+  testId?: string;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -24,13 +24,13 @@ const variantStyles: Record<Variant, string> = {
 
 const baseClass = 'font-light font-body leading-relaxed';
 
-export const SubTitle = ({ variant, className, i18nKey, values }: SubTitleProps) => {
+export const SubTitle = ({ variant, className, i18nKey, testId }: SubTitleProps) => {
   const t = useTranslations(SubTitleKey.TITLE);
 
   if (i18nKey === SubTitleKey.ABOUT_ME) {
     const aboutMe = t.raw(i18nKey) as string[];
     return (
-      <p className={cn(baseClass, variantStyles[variant], className)}>
+      <p className={cn(baseClass, variantStyles[variant], className)} data-testid={testId}>
         {aboutMe.map((paragraph, index) => (
           <span key={index} className="mb-4 block last:mb-0 md:mb-6 2xl:mb-8">
             {paragraph}
@@ -40,5 +40,9 @@ export const SubTitle = ({ variant, className, i18nKey, values }: SubTitleProps)
     );
   }
 
-  return <p className={cn(baseClass, variantStyles[variant], className)}>{t(i18nKey)}</p>;
+  return (
+    <p className={cn(baseClass, variantStyles[variant], className)} data-testid={testId}>
+      {t(i18nKey)}
+    </p>
+  );
 };

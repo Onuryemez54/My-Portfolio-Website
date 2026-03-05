@@ -34,6 +34,7 @@ export const NavLinks = ({ setIsOpen }: NavLinksProps) => {
         return (
           <motion.li key={link.key} variants={itemVariants}>
             <AnimatedNavButton
+              testId={`link-${link.key}`}
               label={link.label}
               isActive={isActive}
               onClick={() => {

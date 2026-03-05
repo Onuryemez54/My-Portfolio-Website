@@ -28,7 +28,12 @@ export const Container = ({ children, className, id }: ContainerProps) => {
         : 'py-8 sm:py-12 md:py-14 lg:py-16';
 
   return (
-    <section id={id} ref={registerSection(id)} className={cn(baseStyles, sectionStyles, className)}>
+    <section
+      id={id}
+      data-testid={id}
+      ref={registerSection(id)}
+      className={cn(baseStyles, sectionStyles, className)}
+    >
       {children}
     </section>
   );
