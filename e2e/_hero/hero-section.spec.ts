@@ -3,6 +3,7 @@ import test, { expect } from '@playwright/test';
 test.describe('Hero Section', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await page.getByTestId('home').scrollIntoViewIfNeeded();
   });
 
   test('should display the hero section', async ({ page }) => {

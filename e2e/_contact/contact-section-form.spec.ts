@@ -3,6 +3,7 @@ import test, { expect } from '@playwright/test';
 test.describe('Contact Form', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await page.getByTestId('contact').scrollIntoViewIfNeeded();
   });
 
   test('should have a call-to-nav-link button', async ({ page }) => {
@@ -14,7 +15,10 @@ test.describe('Contact Form', () => {
 
     await ctaButton.click();
 
-    await expect(page.getByTestId('contact-form')).toBeVisible({ timeout: 5000 });
+    const form = page.getByTestId('contact-form');
+
+    await form.scrollIntoViewIfNeeded();
+    await expect(form).toBeVisible();
   });
 
   test('should display correct content', async ({ page }) => {
