@@ -10,6 +10,11 @@ import { feedbackEmailTemplate } from '@/utils/feedbackEmailTemplate';
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export const sendFeedback = async (data: FormData): Promise<ActionResultType> => {
+  if (!process.env.RESEND_API_KEY) {
+    console.warn('Missing RESEND_API_KEY, skipping email send');
+    return { ok: true };
+  }
+
   const parsedData = feedbackSchema.parse({
     topic: data.get('topic'),
     name: data.get('name'),
