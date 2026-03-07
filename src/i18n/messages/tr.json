@@ -69,6 +69,7 @@
     "FREECODECAMP": "Duyarlı Web Tasarımı Sertifikası — freeCodeCamp",
     "REACT_TESTING": "React Testing Library Sertifikası — Udemy(Stephen Grider)",
     "JAVASCRIPT": "JavaScript Sertifikası — Udemy(Anthony Alicea)",
+    "CODE_2_CAREER": "Code2Career AB'de Web Geliştirici — (02/26 - Halen)",
     "PICK_YOUR_POUR": "Pick Your Pour'da Web Geliştirici Stajyeri — (10/25 - Halen)",
     "INDEPENDENT_PROJECTS": "Bağımsız Projeler — Full Stack Geliştirici — (11/24 - Halen)"
   },
@@ -100,7 +101,7 @@
     },
     "quizApp": {
       "title": "Quiz Uygulaması",
-      "description": "Quiz Uygulaması, kullanıcıların denemek istedikleri quizleri keşfetmelerini sağlayan JavaScript tabanlı bir web uygulamasıdır. Kullanıcılar arama bölümünde arama yapabilir, quizleri favori listelerine ekleyebilir, quizlere yorum ekleyebilir, kategorilere göre listeleyebilir ve quizlerin detaylarını görebilir."
+      "description": "Quiz Uygulaması, JavaScript ve React kütüphanesi kullanılarak oluşturulmuş bir web uygulamasıdır. Kullanıcılar, Json API'den alınan 15 soruyu yanıtlayarak puanlarını görebilirler."
     },
     "portfolio": {
       "title": "Kişisel Portföy",

@@ -85,6 +85,7 @@ export const expertiseContent: Record<ExpertiseCategory, ContentItem[]> = {
     { label: TabContentKey.JAVASCRIPT, icon: FileCode2 },
   ],
   [ExpertiseCategory.EXPERIENCE]: [
+    { label: TabContentKey.CODE_2_CAREER, icon: Briefcase },
     { label: TabContentKey.PICK_YOUR_POUR, icon: Briefcase },
     { label: TabContentKey.INDEPENDENT_PROJECTS, icon: Layers },
   ],

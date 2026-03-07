@@ -69,7 +69,8 @@
     "FREECODECAMP": "Responsive Web Design Certification — freeCodeCamp",
     "REACT_TESTING": "React Testing Library Certification — Udemy(Stephen Grider)",
     "JAVASCRIPT": "JavaScript Certification — Udemy(Anthony Alicea)",
-    "PICK_YOUR_POUR": "Web Developer Intern at Pick Your Pour — (10/25 - Present)",
+    "CODE_2_CAREER": "Web Developer at Code2Career AB — (02/26 - Present)",
+    "PICK_YOUR_POUR": "Web Developer at Pick Your Pour — (10/25 - Present)",
     "INDEPENDENT_PROJECTS": "Independent Projects — Full Stack Developer — (11/24 - Present)"
   },
 
@@ -119,7 +120,7 @@
     },
     "quizApp": {
       "title": "Quiz App",
-      "description": "Quiz App is a JavaScript-based web application. It allows users to discover quizzes they want to try. Users can search in the search section ,can add quizzes to their favorites list ,can add comments to quizzes,can list by categories and can see the details of the quizzes."
+      "description": "Quiz App is a web application built using JavaScript and React library. Users can see their scores by answering 15 questions retrieved from Json API."
     },
     "portfolio": {
       "title": "Personal Portfolio",
