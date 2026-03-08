@@ -20,7 +20,7 @@ export const ProjectFilterTabs = ({ activeTech, setActiveTech }: ProjectFilterTa
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="flex items-center justify-center gap-3 sm:gap-4 lg:gap-5 2xl:gap-6"
+      className="flex items-center justify-center gap-1.5 sm:gap-4 lg:gap-5 2xl:gap-6"
     >
       {tabs.map((tech, index) => {
         const isActive = activeTech === tech;
