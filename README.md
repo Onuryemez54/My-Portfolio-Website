@@ -4,7 +4,6 @@
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Playwright Tests](https://github.com/Onuryemez54/My-Portfolio-Website/actions/workflows/playwright.yml/badge.svg)
-![CI](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
