@@ -84,7 +84,7 @@ export const projects: Project[] = [
       'Playwright',
     ],
     githubUrl: 'https://github.com/Onuryemez54/My-Portfolio-Website',
-    liveUrl: 'https://my-blog-platform.com',
+    liveUrl: 'https://onuryemez-dev.vercel.app',
     image: '/projects/portfolio.webp',
   },
 ];

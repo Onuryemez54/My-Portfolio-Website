@@ -17,7 +17,7 @@ export const HeroButtons = () => {
       />
       <Button
         as="link"
-        href="/CV/Onur_Ahmet_Yemez_CV.pdf"
+        href="/CV/Onur_Yemez_CV.pdf"
         download
         variant="secondary"
         i18nKey={ButtonKey.VIEW_CV}
