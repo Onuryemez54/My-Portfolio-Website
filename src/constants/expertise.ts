@@ -27,6 +27,7 @@ import {
 export const techStackTabs: { key: TechStackCategory; label: TabsKey }[] = [
   { key: TechStackCategory.FRONTEND, label: TabsKey.FRONTEND },
   { key: TechStackCategory.BACKEND, label: TabsKey.BACKEND },
+  { key: TechStackCategory.MOBILE, label: TabsKey.MOBILE },
   { key: TechStackCategory.TOOLS, label: TabsKey.TOOLS },
   { key: TechStackCategory.TESTING, label: TabsKey.TESTING },
 ];
@@ -53,15 +54,22 @@ export const techStackContent: Record<TechStackCategory, ContentItem[]> = {
   ],
 
   [TechStackCategory.BACKEND]: [
+    { label: TabContentKey.NODE_JS, icon: Server },
+    { label: TabContentKey.NEST_JS, icon: Server },
+    { label: TabContentKey.REST_API, icon: Cloud },
+    { label: TabContentKey.POSTGRESQL, icon: Database },
+    { label: TabContentKey.PRISMA, icon: Boxes },
     { label: TabContentKey.SUPABASE, icon: Database },
     { label: TabContentKey.FIREBASE, icon: Flame },
     { label: TabContentKey.SERVER_ACTIONS, icon: Server },
-    { label: TabContentKey.PRISMA, icon: Boxes },
-    { label: TabContentKey.REST_API, icon: Cloud },
   ],
+
+  [TechStackCategory.MOBILE]: [{ label: TabContentKey.REACT_NATIVE, icon: Atom }],
+
   [TechStackCategory.TOOLS]: [
     { label: TabContentKey.GIT, icon: GitBranch },
     { label: TabContentKey.GITHUB, icon: Github },
+    { label: TabContentKey.CI_CD, icon: Cloud },
     { label: TabContentKey.VS_CODE, icon: Monitor },
     { label: TabContentKey.FIGMA, icon: Figma },
     { label: TabContentKey.WEB_PERFORMANCE, icon: Gauge },

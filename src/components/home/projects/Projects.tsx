@@ -1,5 +1,5 @@
 'use client';
-import { ProjectFilterKey, TitleKey } from '@/types/i18n/keys';
+import { ProjectFilterKey, SubTitleKey, TitleKey } from '@/types/i18n/keys';
 import { Container } from '../../ui/Container';
 import { SectionKey } from '@/types/sectionTypes';
 import { Title } from '@/components/ui/Title';
@@ -11,6 +11,7 @@ import { projects } from '@/constants/Projects';
 import { FadeUp } from '@/components/common/animations/FadeUp';
 import { ScrollReveal } from '@/components/common/animations/ScrollReveal';
 import { ProjectFilterTabs } from './ProjectFilterTabs';
+import { SubTitle } from '@/components/ui/SubTitle';
 
 export const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -20,6 +21,15 @@ export const Projects = () => {
     activeTech === ProjectFilterKey.ALL
       ? projects
       : projects.filter((project) => project.techStack.includes(activeTech));
+
+  const isProjectExists = filteredProjects.length > 0;
+
+  const noProjectsFoundKey =
+    activeTech === ProjectFilterKey.NEST_JS
+      ? SubTitleKey.NO_NESTJS_PROJECTS
+      : activeTech === ProjectFilterKey.REACT_NATIVE
+        ? SubTitleKey.NO_REACT_NATIVE_PROJECTS
+        : SubTitleKey.NO_PROJECTS_FOUND;
 
   return (
     <Container id={SectionKey.PROJECTS}>
@@ -36,17 +46,25 @@ export const Projects = () => {
         <ProjectFilterTabs activeTech={activeTech} setActiveTech={setActiveTech} />
 
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {filteredProjects.map((project, index) => (
-            <ScrollReveal
-              key={index}
-              delay={index * 0.2}
-              initialY={30}
-              initialScale={0.9}
-              duration={0.5}
-            >
-              <ProjectCard project={project} onOpen={() => setSelected(project)} />
-            </ScrollReveal>
-          ))}
+          {isProjectExists ? (
+            filteredProjects.map((project, index) => (
+              <ScrollReveal
+                key={index}
+                delay={index * 0.2}
+                initialY={30}
+                initialScale={0.9}
+                duration={0.5}
+              >
+                <ProjectCard project={project} onOpen={() => setSelected(project)} />
+              </ScrollReveal>
+            ))
+          ) : (
+            <SubTitle
+              variant="tertiary"
+              i18nKey={noProjectsFoundKey}
+              className="col-span-full text-center"
+            />
+          )}
         </div>
         <ProjectModal project={selected} onClose={() => setSelected(null)} />
       </div>

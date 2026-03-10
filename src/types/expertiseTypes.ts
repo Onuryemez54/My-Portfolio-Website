@@ -1,6 +1,7 @@
 export enum TechStackCategory {
   FRONTEND = 'FRONTEND',
   BACKEND = 'BACKEND',
+  MOBILE = 'MOBILE',
   TOOLS = 'TOOLS',
   TESTING = 'TESTING',
 }

@@ -56,6 +56,8 @@ export const Title = ({ variant, className, i18nKey, underline, testId }: TitleP
                 1200,
                 techStacks[3],
                 1200,
+                techStacks[4],
+                1200,
               ]}
               speed={40}
               repeat={Infinity}

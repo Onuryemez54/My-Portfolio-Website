@@ -29,6 +29,10 @@ export enum SubTitleKey {
   PROJECTS = 'PROJECTS',
   CONTACT = 'CONTACT',
 
+  NO_NESTJS_PROJECTS = 'NO_NESTJS_PROJECTS',
+  NO_REACT_NATIVE_PROJECTS = 'NO_REACT_NATIVE_PROJECTS',
+  NO_PROJECTS_FOUND = 'NO_PROJECTS_FOUND',
+
   FEEDBACK = 'FEEDBACK',
   NOT_FOUND = 'NOT_FOUND',
 }
@@ -51,6 +55,7 @@ export enum TabsKey {
   TITLE = 'TABS',
   FRONTEND = 'FRONTEND',
   BACKEND = 'BACKEND',
+  MOBILE = 'MOBILE',
   TOOLS = 'TOOLS',
   TESTING = 'TESTING',
   EDUCATION = 'EDUCATION',
@@ -67,15 +72,24 @@ export enum TabContentKey {
   TAILWIND_CSS = 'TAILWIND_CSS',
   REDUX = 'REDUX',
   TANSTACK_QUERY = 'TANSTACK_QUERY',
+
   // Backend
+  NODE_JS = 'NODE_JS',
+  NEST_JS = 'NEST_JS',
+  REST_API = 'REST_API',
+  POSTGRESQL = 'POSTGRESQL',
+  PRISMA = 'PRISMA',
   SUPABASE = 'SUPABASE',
   FIREBASE = 'FIREBASE',
   SERVER_ACTIONS = 'SERVER_ACTIONS',
-  PRISMA = 'PRISMA',
-  REST_API = 'REST_API',
+
+  // Mobile
+  REACT_NATIVE = 'REACT_NATIVE',
+
   // Tools
   GIT = 'GIT',
   GITHUB = 'GITHUB',
+  CI_CD = 'CI_CD',
   VS_CODE = 'VS_CODE',
   FIGMA = 'FIGMA',
   WEB_PERFORMANCE = 'WEB_PERFORMANCE',
@@ -115,6 +129,8 @@ export enum ProjectFilterKey {
   REACT = 'React',
   TYPESCRIPT = 'TypeScript',
   JAVASCRIPT = 'JavaScript',
+  NEST_JS = 'NestJS',
+  REACT_NATIVE = 'React Native',
 }
 
 export enum ProjectKey {

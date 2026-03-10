@@ -10,10 +10,11 @@
     "GREETING": "Welcome",
     "HERO": "Hi, I’m <highlight>Onur</highlight>",
     "HERO_TECH_STACK": [
-      "Frontend Engineer",
-      "React & Next.js Developer",
-      "Backend Experience",
-      "Building Scalable Web Apps"
+      "Full-Stack Developer",
+      "React & Next.js",
+      "Node.js & NestJS",
+      "React Native",
+      "Building Scalable Apps"
     ],
     "ABOUT_ME": "About Me",
     "PROJECTS": "My featured projects",
@@ -22,12 +23,16 @@
     "NOT_FOUND": "Page Not Found"
   },
   "SUB_TITLE": {
-    "HERO": "I craft modern, high-performance web interfaces with a strong focus on user experience, scalability, and clean architecture.",
+    "HERO": "I build modern, high-performance web and mobile applications with a strong focus on user experience, scalability, and clean architecture. As a full-stack developer, I develop robust front-end interfaces with React and scalable backend systems using Node.js and NestJS.",
     "ABOUT_ME": [
-      "I am a front-end focused full-stack developer with a strong engineering background, building modern and scalable web applications. I specialize in React, TypeScript, and Next.js, creating clean, maintainable, and production-ready interfaces with reusable component architecture.",
-      "On the backend, I integrate authentication flows, database logic, and REST APIs using services like Supabase and Firebase, along with custom Next.js route handlers to deliver complete full-stack solutions.",
-      "I am committed to continuous learning and performance-driven development. I actively collaborate within teams using Git-based workflows, contributing through structured commits, pull requests, and code reviews to ensure clean and reliable production outcomes."
+      "I am a full-stack developer with a strong engineering background, building modern, scalable, and production-ready applications. I specialize in React, TypeScript, and Next.js, creating clean, maintainable interfaces with a reusable component architecture and strong attention to performance and user experience.",
+      "On the backend, I develop robust APIs and server-side systems using Node.js and NestJS, implementing structured architectures, authentication flows, and database integrations. I work with PostgreSQL, Supabase, and Firebase, building secure REST APIs and scalable backend services that power modern applications.",
+      "I also develop cross-platform mobile applications using React Native, extending web products into mobile environments with consistent architecture and shared development practices.",
+      "I am committed to continuous learning and performance-driven development. I actively collaborate within teams using Git-based workflows, contributing through structured commits, pull requests, and code reviews to ensure clean, maintainable, and reliable production outcomes."
     ],
+    "NO_NESTJS_PROJECTS": "NestJS backend projects are currently in development. They will be published here soon.",
+    "NO_REACT_NATIVE_PROJECTS": "React Native mobile projects are currently in development. They will be published here soon.",
+    "NO_PROJECTS_FOUND": "No projects found for the selected technology.",
     "NOT_FOUND": "Sorry, the page you are looking for does not exist. Please try returning to the homepage.",
     "CONTACT": "Feel free to reach out to me for any inquiries, collaborations, or just a friendly hello! I'm always open to connecting with fellow developers, potential employers, or anyone interested in my work.",
     "FEEDBACK": "Your input is invaluable in helping me improve and grow as a developer. Please don't hesitate to share your feedback with me!"
@@ -36,11 +41,12 @@
   "TABS": {
     "FRONTEND": "Frontend",
     "BACKEND": "Backend",
+    "MOBILE": "Mobile",
     "TOOLS": "Tools",
     "TESTING": "Testing",
+    "EXPERIENCE": "Experience",
     "EDUCATION": "Education",
-    "CERTIFICATIONS": "Certifications",
-    "EXPERIENCE": "Experience"
+    "CERTIFICATIONS": "Certifications"
   },
 
   "TAB_CONTENT": {
@@ -50,25 +56,37 @@
     "TAILWIND_CSS": "Tailwind CSS",
     "REDUX": "Redux",
     "TANSTACK_QUERY": "TanStack Query",
+
+    "NODE_JS": "Node.js",
+    "NEST_JS": "NestJS",
+    "REST_API": "REST API",
+    "PRISMA": "Prisma",
+    "POSTGRESQL": "PostgreSQL",
     "SUPABASE": "Supabase",
     "FIREBASE": "Firebase",
     "SERVER_ACTIONS": "Next.js Server Actions",
-    "PRISMA": "Prisma",
-    "REST_API": "REST API",
+
+    "REACT_NATIVE": "React Native",
+
     "GIT": "Git",
     "GITHUB": "GitHub",
+    "CI_CD": "CI/CD",
     "VS_CODE": "VS Code",
     "FIGMA": "Figma",
     "WEB_PERFORMANCE": "Web Performance",
     "SEO": "SEO",
+
     "VITEST": "Vitest",
     "REACT_TESTING_LIBRARY": "React Testing Library",
     "PLAYWRIGHT": "Playwright",
-    "BACHELOR": "Bachelor's Degree in Mechanical Engineering, Bartın University (2012-2017) ",
+
+    "BACHELOR": "Bachelor's Degree in Mechanical Engineering, Bartın University (2012-2017)",
     "CODE2CAREER": "Web Development Program — Code2Career AB (01/2023 - 04/2024)",
+
     "FREECODECAMP": "Responsive Web Design Certification — freeCodeCamp",
-    "REACT_TESTING": "React Testing Library Certification — Udemy(Stephen Grider)",
-    "JAVASCRIPT": "JavaScript Certification — Udemy(Anthony Alicea)",
+    "REACT_TESTING": "React Testing Library Certification — Udemy (Stephen Grider)",
+    "JAVASCRIPT": "JavaScript Certification — Udemy (Anthony Alicea)",
+
     "CODE_2_CAREER": "Web Developer at Code2Career AB — (02/26 - Present)",
     "PICK_YOUR_POUR": "Web Developer at Pick Your Pour — (10/25 - Present)",
     "INDEPENDENT_PROJECTS": "Independent Projects — Full Stack Developer — (11/24 - Present)"
@@ -98,7 +116,9 @@
     "Next_js": "Next.js",
     "React": "React",
     "TypeScript": "TypeScript",
-    "JavaScript": "JavaScript"
+    "JavaScript": "JavaScript",
+    "Nest_js": "NestJS",
+    "React_Native": "React Native"
   },
 
   "PROJECTS": {

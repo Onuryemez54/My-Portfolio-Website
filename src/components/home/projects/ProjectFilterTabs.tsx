@@ -25,7 +25,15 @@ export const ProjectFilterTabs = ({ activeTech, setActiveTech }: ProjectFilterTa
       {tabs.map((tech, index) => {
         const isActive = activeTech === tech;
         const isNextJs = tech === ProjectFilterKey.NEXT_JS;
-        const label = isNextJs ? 'Next.js' : t(tech);
+        const isNestJs = tech === ProjectFilterKey.NEST_JS;
+        const isReactNative = tech === ProjectFilterKey.REACT_NATIVE;
+        const label = isNextJs
+          ? 'Next.js'
+          : isNestJs
+            ? 'NestJS'
+            : isReactNative
+              ? 'React Native'
+              : t(tech);
 
         return (
           <Fragment key={String(tech)}>

@@ -10,10 +10,11 @@
     "GREETING": "Hoşgeldiniz",
     "HERO": "Merhaba, ben <highlight>Onur</highlight>",
     "HERO_TECH_STACK": [
-      "Frontend Mühendisi",
-      "React & Next.js Geliştiricisi",
-      "Backend Deneyimli",
-      "Ölçeklenebilir Web Uygulamaları İnşa Etme"
+      "Full-Stack Geliştirici",
+      "React & Next.js",
+      "Node.js & NestJS",
+      "React Native",
+      "Ölçeklenebilir Uygulamalar geliştiriyorum"
     ],
     "ABOUT_ME": "Hakkımda",
     "PROJECTS": "Öne çıkan projelerim",
@@ -22,25 +23,30 @@
     "NOT_FOUND": "Sayfa bulunamadı"
   },
   "SUB_TITLE": {
-    "HERO": "Kullanıcı deneyimine, ölçeklenebilirliğe ve temiz mimariye güçlü bir şekilde odaklanarak modern, yüksek performanslı web arayüzleri tasarlıyorum.",
+    "HERO": "Modern, yüksek performanslı web ve mobil uygulamalar inşa ediyorum, kullanıcı deneyimi, ölçeklenebilirlik ve temiz mimariye güçlü bir odaklanma ile. Bir full-stack geliştirici olarak, React ile sağlam ön uç arayüzleri ve Node.js ve NestJS kullanarak ölçeklenebilir arka uç sistemleri geliştiriyorum.",
     "ABOUT_ME": [
-      "Güçlü bir mühendislik geçmişine sahip, modern ve ölçeklenebilir web uygulamaları geliştiren ön uç odaklı tam yığın geliştiricisiyim. React, TypeScript ve Next.js konusunda uzmanım, temiz, bakımı kolay ve üretime hazır arayüzler oluşturuyorum ve yeniden kullanılabilir bileşen mimarisi oluşturuyorum.",
-      "Backend tarafında, Supabase ve Firebase gibi hizmetler kullanarak kimlik doğrulama akışlarını, veritabanı mantığını ve REST API'lerini entegre ediyorum ve eksiksiz tam yığın çözümler sunmak için özel Next.js rota işleyicileri kullanıyorum.",
-      "Sürekli öğrenmeye ve performans odaklı geliştirmeye kendimi adadım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz ve güvenilir üretim sonuçları sağlıyorum."
+      "Full-stack geliştirici olarak güçlü bir mühendislik geçmişine sahip, modern, ölçeklenebilir ve üretime hazır uygulamalar inşa ediyorum. React, TypeScript ve Next.js konusunda uzmanım, temiz, bakımı kolay arayüzler oluşturuyorum, yeniden kullanılabilir bileşen mimarisi ve performans ve kullanıcı deneyimine güçlü bir dikkatle.",
+      "Arka uçta, Node.js ve NestJS kullanarak sağlam API'ler ve sunucu tarafı sistemler geliştiriyorum, yapılandırılmış mimariler, kimlik doğrulama akışları ve veritabanı entegrasyonları uyguluyorum. PostgreSQL, Supabase ve Firebase ile çalışıyorum, modern uygulamaları güçlendiren güvenli REST API'ler ve ölçeklenebilir arka uç hizmetleri inşa ediyorum.",
+      "Ayrıca, React Native kullanarak çapraz platform mobil uygulamalar geliştiriyorum, web ürünlerini tutarlı mimari ve paylaşılan geliştirme uygulamalarıyla mobil ortamlara genişletiyorum.",
+      "Sürekli öğrenmeye ve performans odaklı geliştirmeye bağlıyım. Git tabanlı iş akışları kullanarak ekip içinde aktif olarak işbirliği yapıyorum, yapılandırılmış taahhütler, pull istekleri ve kod incelemeleri yoluyla katkıda bulunarak temiz, bakımı kolay ve güvenilir üretim sonuçları sağlıyorum."
     ],
+    "NO_NESTJS_PROJECTS": "NestJS arka uç projeleri şu anda geliştirme aşamasında. Yakında burada yayınlanacaklar.",
+    "NO_REACT_NATIVE_PROJECTS": "React Native mobil projeleri şu anda geliştirme aşamasında. Yakında burada yayınlanacaklar.",
+    "NO_PROJECTS_FOUND": "Seçilen teknoloji için proje bulunamadı.",
     "NOT_FOUND": "Üzgünüz, aradığınız sayfa mevcut değil. Lütfen ana sayfaya dönmeyi deneyin.",
     "CONTACT": "Herhangi bir sorunuz, işbirliği teklifiniz veya sadece dostça selam vermek için benimle iletişime geçmekten çekinmeyin! Ben her zaman diğer geliştiriciler, potansiyel işverenler veya çalışmalarım hakkında ilgilenen herkesle bağlantı kurmaya açığım.",
     "FEEDBACK": "Geri bildiriminiz, bir geliştirici olarak gelişmeme ve büyümeme yardımcı olmak için çok değerlidir. Lütfen benimle geri bildirimlerinizi paylaşmaktan çekinmeyin!"
   },
 
   "TABS": {
-    "FRONTEND": "Frontend",
-    "BACKEND": "Backend",
+    "FRONTEND": "Ön Uç",
+    "BACKEND": "Arka Uç",
+    "MOBILE": "Mobil",
     "TOOLS": "Araçlar",
     "TESTING": "Test",
+    "EXPERIENCE": "Deneyim",
     "EDUCATION": "Eğitim",
-    "CERTIFICATIONS": "Sertifikalar",
-    "EXPERIENCE": "Deneyim"
+    "CERTIFICATIONS": "Sertifikalar"
   },
 
   "TAB_CONTENT": {
@@ -50,25 +56,37 @@
     "TAILWIND_CSS": "Tailwind CSS",
     "REDUX": "Redux",
     "TANSTACK_QUERY": "TanStack Query",
+
+    "NODE_JS": "Node.js",
+    "NEST_JS": "NestJS",
+    "REST_API": "REST API",
+    "PRISMA": "Prisma",
+    "POSTGRESQL": "PostgreSQL",
     "SUPABASE": "Supabase",
     "FIREBASE": "Firebase",
     "SERVER_ACTIONS": "Next.js Server Actions",
-    "PRISMA": "Prisma",
-    "REST_API": "REST API",
+
+    "REACT_NATIVE": "React Native",
+
     "GIT": "Git",
     "GITHUB": "GitHub",
+    "CI_CD": "CI/CD",
     "VS_CODE": "VS Code",
     "FIGMA": "Figma",
     "WEB_PERFORMANCE": "Web Performance",
     "SEO": "SEO",
+
     "VITEST": "Vitest",
     "REACT_TESTING_LIBRARY": "React Testing Library",
     "PLAYWRIGHT": "Playwright",
+
     "BACHELOR": "Makine Mühendisliği, Bartın Üniversitesi (2012-2017)",
     "CODE2CAREER": "Web Development Program — Code2Career AB (01/2023 - 04/2024)",
+
     "FREECODECAMP": "Duyarlı Web Tasarımı Sertifikası — freeCodeCamp",
     "REACT_TESTING": "React Testing Library Sertifikası — Udemy(Stephen Grider)",
     "JAVASCRIPT": "JavaScript Sertifikası — Udemy(Anthony Alicea)",
+
     "CODE_2_CAREER": "Code2Career AB'de Web Geliştirici — (02/26 - Halen)",
     "PICK_YOUR_POUR": "Pick Your Pour'da Web Geliştirici Stajyeri — (10/25 - Halen)",
     "INDEPENDENT_PROJECTS": "Bağımsız Projeler — Full Stack Geliştirici — (11/24 - Halen)"
@@ -79,7 +97,9 @@
     "Next_js": "Next.js",
     "React": "React",
     "TypeScript": "TypeScript",
-    "JavaScript": "JavaScript"
+    "JavaScript": "JavaScript",
+    "Nest_js": "NestJS",
+    "React_Native": "React Native"
   },
 
   "PROJECTS": {
