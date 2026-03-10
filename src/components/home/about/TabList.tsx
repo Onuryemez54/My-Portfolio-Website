@@ -21,7 +21,7 @@ export const TabList = <T extends string>({ tabs, activeTab, onChange }: TabList
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.6 }}
-      className="flex items-center justify-start gap-3 sm:gap-4 md:justify-center lg:gap-5 2xl:gap-6"
+      className="flex items-center justify-start gap-2 sm:gap-3 md:justify-center lg:gap-4 2xl:gap-6"
     >
       {tabs.map((tab, index) => {
         const isActive = activeTab === tab.key;

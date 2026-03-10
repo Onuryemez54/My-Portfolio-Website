@@ -21,7 +21,7 @@ export const Expertise = () => {
 
   return (
     <div className="grid items-start justify-start gap-10 md:grid-cols-12 md:gap-0">
-      <div className="col-span-5 h-32 w-full gap-4">
+      <div className="col-span-5 flex h-40 w-full flex-col gap-2">
         <TabList<TechStackCategory>
           tabs={techStackTabs}
           activeTab={activeTechStackTab}
@@ -31,7 +31,7 @@ export const Expertise = () => {
       </div>
       <Divider direction="vertical" className="col-span-2 hidden md:flex md:justify-center" />
       <Divider className="col-span-5 flex md:hidden" />
-      <div className="col-span-5 h-48 w-full gap-4">
+      <div className="col-span-5 flex h-52 w-full flex-col gap-2 sm:h-48">
         <TabList<ExpertiseCategory>
           tabs={expertiseTabs}
           activeTab={activeExpertiseTab}
