@@ -21,7 +21,7 @@ test.describe('Hero Section', () => {
     await expect(subheading).toBeVisible();
 
     await expect(heading).toContainText(/onur/i);
-    await expect(subheading).toContainText(/web interfaces/i);
+    await expect(subheading).toContainText(/web and mobile applications/i);
   });
 
   test('should have a call-to-action button', async ({ page }) => {

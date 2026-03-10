@@ -35,7 +35,7 @@ test.describe('About Section', () => {
     await expect(subheading).toBeVisible();
 
     await expect(heading).toContainText(/about me/i);
-    await expect(subheading).toContainText(/focused full-stack developer/i);
+    await expect(subheading).toContainText(/maintainable interfaces/i);
   });
 
   test('should have a call-to-action button', async ({ page }) => {
